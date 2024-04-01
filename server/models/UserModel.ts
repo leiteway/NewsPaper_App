@@ -21,9 +21,10 @@ const UserModel = connection_db.define('User', {
     type: DataTypes.STRING,
     allowNull: false
  },
- admin:{
+ role:{
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
+    defaultValue: 'user'
  }
 
 },

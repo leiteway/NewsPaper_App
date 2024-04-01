@@ -16,7 +16,7 @@ export const getAllNews = async (req: Request, res:Response) =>{
 
 // POST (INSERT)
 
-export const addNewSculpture = async (req: Request, res: Response) =>{
+export const addNewPost = async (req: Request, res: Response) =>{
 
     try{
       const publishNews = await NewsModel.create(req.body);
