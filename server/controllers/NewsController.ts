@@ -1,14 +1,29 @@
 import NewsModel from "../models/NewsModel";
+import { Response,Request } from 'express';
 
 //GET NEWS
-export const getAllNews = async (request:Request, response: Number) =>{
+export const getAllNews = async (req: Request, res:Response) =>{
 
     try{
         const news = await NewsModel.findAll(); 
-        response.status(200).json(news);
+        res.status(200).json(news);
       }
-      
-    catch(error){
-        response.status(500).json({message: error.message})
+
+    catch(error: any){
+        res.status(500).json({message: error.message})
     }
 }
+
+// POST (INSERT)
+
+export const addNewSculpture = async (req: Request, res: Response) =>{
+
+    try{
+      const publishNews = await NewsModel.create(req.body);
+      res.status(201).json(publishNews)
+    }
+  
+    catch(error: any){
+      res.status(500).json({message: error.message})
+  }
+  }

@@ -1,8 +1,9 @@
 import express from "express";
+import { getAllNews } from "../controllers/NewsController";
 
 const router = express.Router() //estamos invocado el enrutador
 
-router.get('/');
+router.get('/', getAllNews);
 
 router.delete('/:id');
 
