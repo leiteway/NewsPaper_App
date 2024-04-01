@@ -3,34 +3,35 @@ import { DataTypes } from 'sequelize';
 import connection_db from '../database/connection_db';
 
 const UserModel = connection_db.define('User', {
- id: {
-   type: DataTypes.BIGINT,
-   primaryKey: true,
-   autoIncrement: true,
-   unique: true
- },
- name:{
-    type: DataTypes.STRING,
-    allowNull: false
- },
- email:{
-    type: DataTypes.STRING,
-    allowNull: false
- },
- password:{
-    type: DataTypes.STRING,
-    allowNull: false
- },
- admin:{
-    type: DataTypes.STRING,
-    allowNull: false
- }
+   id: {
+      type: DataTypes.BIGINT,
+      primaryKey: true,
+      autoIncrement: true,
+      unique: true
+   },
+   name:{
+      type: DataTypes.STRING,
+      allowNull: false
+   },
+   email:{
+      type: DataTypes.STRING,
+      allowNull: false
+   },
+   password:{
+      type: DataTypes.STRING,
+      allowNull: false
+   },
+   role:{
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: 'user'
+   }
 
 },
 {
     tableName: 'users', // Nombre de la tabla en la base de datos
     timestamps: true // Habilitando los campos los campos createdAt y updatedAt
-  }
+}
 );
 
 console.log(UserModel === connection_db.models.User); // devuelve true

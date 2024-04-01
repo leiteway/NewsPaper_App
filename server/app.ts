@@ -3,13 +3,20 @@ import connection_db from "./database/connection_db";
 import express from "express";
 import UserModel from "./models/UserModel";
 import NewsModel from "./models/NewsModel";
-import NewsRouter from "./routes/NewsRouter"
+import NewsRouter from "./routes/NewsRouter";
+import AuthRouter from "./routes/AuthRouter";
+import UserRouter from "./routes/UserRouter";
 
 export const app = express();
 
 app.use(express.json()); // para que la aplicacion pueda soportar formato json desde postman (Middleware para parsear el cuerpo de las solicitudes en formato JSON)
 
-app.use("/api", NewsRouter)
+app.use("/api/news", NewsRouter)
+
+app.use("/api/auth", AuthRouter)
+
+app.use("/api/user", UserRouter)
+
 
     try {
     connection_db.authenticate();

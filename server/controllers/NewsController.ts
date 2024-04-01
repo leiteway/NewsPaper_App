@@ -12,11 +12,10 @@ export const getAllNews = async (req: Request, res:Response) =>{
     catch(error: any){
         res.status(500).json({message: error.message})
     }
-}
+};
 
 // POST (INSERT)
-
-export const addNewSculpture = async (req: Request, res: Response) =>{
+export const addNewPost = async (req: Request, res: Response) =>{
 
     try{
       const publishNews = await NewsModel.create(req.body);
@@ -26,4 +25,4 @@ export const addNewSculpture = async (req: Request, res: Response) =>{
     catch(error: any){
       res.status(500).json({message: error.message})
   }
-  }
+};
