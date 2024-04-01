@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import LayoutPublic from "../components/layout";
+import LayoutPublic from "../components/layout/";
 import Home from "../components/home/Home";
 import SignInForm from "../components/signInForm/SignInForm";
 import RegisterForm from "../components/registerForm/RegisterForm";
@@ -17,11 +17,11 @@ export const router = createBrowserRouter([
     {
         path: "/SignIn",
         element: <SignInForm/>,
-    }
+    },
     {
         path: "/Register",
         element: <RegisterForm/>,
-    }
+    },
     {
         path: "/",
         element: <Home/>,
