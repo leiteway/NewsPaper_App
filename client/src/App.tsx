@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import SignInSide from './components/registerForm/SingIn'
+import './App.css'
+import SignInSide from './components/signInForm/SingIn'
+import EditNews from './components/editNews/EditNews'
 
 function App() {
   const [count, setCount] = useState(0)
