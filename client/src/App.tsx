@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import SignInSide from './components/registerForm/SingIn'
 
 function App() {
