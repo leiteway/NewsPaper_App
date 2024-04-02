@@ -1,0 +1,20 @@
+.footer-div{
+    background-color: #041116;
+    height: 5rem;
+    position: relative;
+}
+.footer-div p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #DBEDF5;
+    font-size: 0.7rem;
+    margin-top: 2%;
+    padding: 6.5%;
+}
+
+@media only screen and (min-width: 768px){
+    .footer-div p{
+        font-size: 1rem;
+    }
+}

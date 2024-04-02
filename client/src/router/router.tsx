@@ -1,4 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
+import SignInSide from "../components/registerForm/SingIn";
+import LayoutPublic from "../components/LayoutPublic";
 import SignIn from "../components/registerForm/SignIn";
 // import LayoutPublic from "../components/layout/";
 // import Home from "../components/home/Home";
@@ -11,7 +13,7 @@ import RegisterForm from "../components/registerForm/RegisterForm";
 export const router = createBrowserRouter([
   {
       path: "/",
-      // element: <LayoutPublic />,
+      element: <LayoutPublic />,
       children: [
     
     {
