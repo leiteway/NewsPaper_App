@@ -24,7 +24,6 @@
   transform: translate(-50%, -50%);
   z-index: 1;
   text-align: center;
-  font-family: open-sans, sans-serif;
 }
 
 h1 {
@@ -40,7 +39,7 @@ p {
 .image-side {
   width: 100%;
   height: 100vh;
-  background-image: url('https://raw.githubusercontent.com/pointfs/NEWSPAPER/feature-forms-register/client/src/assets/images/5052197.jpg');
+  background-image: url('https://raw.githubusercontent.com/pointfs/NEWSPAPER/feature-forms-register/client/src/assets/images/background-img-form-signin.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -59,7 +58,6 @@ p {
   box-shadow: 0 0 10px #1A3645;
   background: linear-gradient(70deg, #071a21, #041116);
   color: #fff;
-  font-family: open-sans, sans-serif;
 }
 
 .form h5 {
