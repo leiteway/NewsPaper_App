@@ -1,16 +1,17 @@
 import express from "express";
 import { getAllPosts, deletePost, addNewPost, editPost, getOnePost } from "../controllers/NewsController";
+import { auth } from '../middlewares/authMiddleware'
 
 const router = express.Router() 
 
-router.get('/', getAllPosts);
+router.get('/', auth, getAllPosts);
 
-router.delete('/:id', deletePost);
+router.delete('/:id', auth, deletePost);
 
-router.post('/', addNewPost);
+router.post('/', auth, addNewPost);
 
-router.put('/:id', editPost);
+router.put('/:id', auth, editPost);
 
-router.get('/:id', getOnePost);
+router.get('/:id', auth, getOnePost);
 
 export default router;
