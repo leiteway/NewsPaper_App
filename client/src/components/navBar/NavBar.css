@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .logotipo {
@@ -17,21 +18,33 @@
 }
 .searchBar{
     background-color: none;
-    border: solid 0.5px rgba(226, 232, 240, 0.3);
+    border: solid 0.2px rgba(226, 232, 240, 0.1);
     border-radius: 40px;
     width: 40vw;
     height: 11vh;
     background: linear-gradient(90deg, #0E212C, #1A3645);
-    text-align: center;
-
+    color: #fff;
+    text-indent: 60px;
 }
 
-.textField label {
-    outline: 0;
-    border: 0;
-    color: #fff
+.searchIcon {
+    color:#fff;
+    position: absolute;
+    top: 8%;
+    left: 38.5%;
 }
 
-.textField .MuiInputBase-root {
-    border: none;
+.searchBar::placeholder {
+    color: #999;
+    text-indent: 60px;
 }
+.userContainer{
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
