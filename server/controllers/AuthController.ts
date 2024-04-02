@@ -1,5 +1,6 @@
 //REGISTER
 import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
 import UserModel from '../models/UserModel';
 import { Request, Response } from 'express';
 
@@ -23,15 +24,14 @@ export const registerUser = async (req: Request, res: Response) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 };
-
 //LOGIN
 export const loginUser = async (req: Request, res: Response) => {
     try {
         const user: any = await UserModel.findOne({ where: {email: req.body.email} }); //El any luego hay que tiparlo
+        
         if(!user) {
             return res.status(404).send({ error: "USER_NOT_FOUND" })
         }
-
 
         const checkPassword = await bcrypt.compare(req.body.password, user.password);
 
@@ -39,9 +39,11 @@ export const loginUser = async (req: Request, res: Response) => {
             return res.status(401).send( {error: 'INVALID_PASSWORD'});
         }
 
-        res.status(200).send({ message: 'USER_LOGIN_SUCCESFULLY'});
+        const token = jwt.sign({email: user.email, role: user.role}, "secret", {expiresIn: '24h'});
+
+        res.status(200).send({ message: 'USER_LOGIN_SUCCESSFULLY', token});
     
-    } catch(error) {
+    } catch(error: any) {
         
         return res.status(500).send({ error: 'Internal server error'});
     }
