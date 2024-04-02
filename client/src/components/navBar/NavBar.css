@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logotipo {
+    width: 7rem;
+    height: 6.5rem;
+    padding: 1rem 5rem;
+}
+.navbar {
+    background-color: #041116;
+    height: 19.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchBar{
+    background-color: none;
+    border: solid 0.5px rgba(226, 232, 240, 0.3);
+    border-radius: 40px;
+    width: 40vw;
+    height: 11vh;
+    background: linear-gradient(90deg, #0E212C, #1A3645);
+    text-align: center;
+
+}
+
+.textField label {
+    outline: 0;
+    border: 0;
+    color: #fff
+}
+
+.textField .MuiInputBase-root {
+    border: none;
+}
