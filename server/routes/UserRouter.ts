@@ -1,7 +1,7 @@
 import express from "express";
 
 
-const router = express.Router() //estamos invocado el enrutador
+const router = express.Router() 
 
 router.get('/', );
 
