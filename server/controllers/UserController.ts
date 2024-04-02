@@ -18,14 +18,15 @@ export const getOneUser = async (req: Request, res:Response) =>{
 //POST
 export const createUser = async (req: Request, res: Response) => {
     try {
-        const { name, email, password } = req.body;
+        const { name, email, password, role } = req.body;
 
         const hashedPassword = await bcrypt.hash(password, 10);
         
         const newUser = await UserModel.create({
             name,
             email,
-            password: hashedPassword
+            password: hashedPassword,
+            role
         });
 
         res.status(201).json(newUser);
