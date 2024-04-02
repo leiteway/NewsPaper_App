@@ -1,16 +1,16 @@
 import express from "express";
-import { getAllNews, addNewPost } from "../controllers/NewsController";
+import { getAllPosts, deletePost, addNewPost, editPost, getOnePost } from "../controllers/NewsController";
 
-const router = express.Router() //estamos invocado el enrutador
+const router = express.Router() 
 
-router.get('/', getAllNews);
+router.get('/', getAllPosts);
 
-router.delete('/:id');
+router.delete('/:id', deletePost);
 
 router.post('/', addNewPost);
 
-router.put('/:id');
+router.put('/:id', editPost);
 
-router.get('/:id');
+router.get('/:id', getOnePost);
 
 export default router;
