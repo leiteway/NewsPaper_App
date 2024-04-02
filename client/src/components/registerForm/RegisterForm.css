@@ -26,12 +26,12 @@
   text-align: center;
 }
 
-h1 {
+.title-container h1 {
   color: #fff;
   font-size: 36px;
 }
 
-p {
+.title-container p {
   color: #fff;
   font-size: 18px;
 }

@@ -1,8 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import SignInSide from "../components/registerForm/SingIn";
-import LayoutPublic from "../components/LayoutPublic";
 import SignIn from "../components/registerForm/SignIn";
-// import LayoutPublic from "../components/layout/";
+import LayoutPublic from "../components/LayoutPublic";
 // import Home from "../components/home/Home";
 import RegisterForm from "../components/registerForm/RegisterForm";
 // import NewPost from "../components/newPost/NewPost";

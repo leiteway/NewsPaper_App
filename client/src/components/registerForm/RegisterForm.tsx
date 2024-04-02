@@ -1,8 +1,10 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import './RegisterForm.css';
-import GitHubIcon from '@material/ui-icons/GitHub';
-import AppleIcon from '@material-ui/icons/Apple';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import AppleIcon from '@mui/icons-material/Apple';
+import GoogleIcon from '@mui/icons-material/Google';
+import TextField from '@mui/material/TextField';
 
 
 type FormData = {
@@ -28,9 +30,9 @@ export const RegisterForm: React.FC = () => {
       <form className='form' onSubmit={handleSubmit(onSubmit)}>
           <h5>Registrate con</h5>
         <div className="social-login">
-          <a href=""><GitHubIcon/></a>
-          <a href=""><AppleIcon/></a>
-          <a href=""></a>
+          <a href=""><GitHubIcon className='github-icon'/></a>
+          <a href=""><AppleIcon className='apple-icon'/></a>
+          <a href=""><GoogleIcon className='google-icon'/></a>
         </div>
         <h5 className='or-subtitle'></h5>
         <label>
