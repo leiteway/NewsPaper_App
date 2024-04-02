@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import SignInSide from "../components/registerForm/SingIn";
 import LayoutPublic from "../components/LayoutPublic";
+import SideBar from "../components/sideBar/SideBar";
 // import Home from "../components/home/Home";
 
 // import RegisterForm from "../components/registerForm/RegisterForm";
@@ -39,6 +40,11 @@ export const router = createBrowserRouter([
     {
       path: "/card/:id",
       // element: <Card/>
+    },
+
+    {
+      path: "/SideBar/:id",
+      element: <SideBar/>
     }
   ],
   }
