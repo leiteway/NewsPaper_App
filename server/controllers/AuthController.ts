@@ -16,7 +16,6 @@ export const registerUser = async (req: Request, res: Response) => {
             password: hashedPassword,
         });
 
-
         res.status(201).json(newUser);
 
     } catch (error) {
@@ -24,6 +23,7 @@ export const registerUser = async (req: Request, res: Response) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 };
+
 //LOGIN
 export const loginUser = async (req: Request, res: Response) => {
     try {
@@ -39,7 +39,7 @@ export const loginUser = async (req: Request, res: Response) => {
             return res.status(401).send( {error: 'INVALID_PASSWORD'});
         }
 
-        const token = jwt.sign({email: user.email, role: user.role}, "secret", {expiresIn: '24h'});
+        const token = jwt.sign({id: user.id, role: user.role}, "secret", {expiresIn: '24h'});
 
         res.status(200).send({ message: 'USER_LOGIN_SUCCESSFULLY', token});
     
