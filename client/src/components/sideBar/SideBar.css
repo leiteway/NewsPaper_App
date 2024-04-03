@@ -1,6 +1,37 @@
-.sideBar-container{
-    width: 30vw;
-    height: 100vh;
+.sideBar-container {
+    width: 20rem;
+    height: 100rem;
     background: linear-gradient(90deg, #0E212C, #1A3645);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    margin-left: 2rem;
+}
+
+hr {
+    width: 18rem;
+    align-self: center;
+    margin-top: 2rem;
+}
+
+.text-sidebar {
+    color: #fff;
+    padding: 10% 20%;
     
+}
+
+.title-sidebar {
+    /* color: linear-gradient(80deg, #fff, #000); */
+    color: transparent;
+    background-image: linear-gradient(60deg, #fff, #000);
+    background-clip: text;
+    font-weight: 500;
+    align-self: center;
+    padding-top: 10%;
+    font-size: 1.2rem;
+}
+
+.icons-sidebar {
+    width: 12rem;
 }
