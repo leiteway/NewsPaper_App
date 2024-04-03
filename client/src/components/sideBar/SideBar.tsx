@@ -14,14 +14,14 @@ export default function SideBar(){
             <p className='text-sidebar'>Nuevo Post</p>
             <p className='text-sidebar'>REDES SOCIALES</p>
             <img src="src/assets/public/social icons.png" alt="Iconos de redes sociales" />   
-        </div> 
-        <div className='contact-container'>
-            <img src="src/assets/images/bg-sidebar.png" alt="" /> /*Este es el bg del Need Help y tiene que estar de fondo*/
-            <img src="src/assets/public/Icon-contact-us.png" alt="Icono de contacto" />
-            <p className='text-sidebar'>¿Necesitas ayuda?</p>
-            <p className='text-sidebar'>Contacta con nosotras</p>
-            <button className='text-sidebar'>CONTACTAR</button>
-
+        
+            <div className='contact-container'>
+                <img src="src/assets/images/bg-sidebar.png" alt="" /> {/* Este es el bg del Need Help y tiene que estar de fondo */}
+                <img src="src/assets/public/Icon-contact-us.png" alt="Icono de contacto" />
+                <p className='text-sidebar'>¿Necesitas ayuda?</p>
+                <p className='text-sidebar'>Contacta con nosotras</p>
+                <button className='text-sidebar'>CONTACTAR</button>
+            </div> 
         </div>   
     </div>
   )

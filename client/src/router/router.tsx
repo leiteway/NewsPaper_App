@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
     },
 
     {
-      path: "/SideBar/:id",
+      path: "/SideBar",
       element: <SideBar/>
     }
   ],
