@@ -57,6 +57,7 @@ hr {
 .contact-container {
     position: relative;
     align-items: center;
+    margin-top: 90vh;
 }
 
 .contact-bg {
@@ -80,9 +81,15 @@ hr {
 
 .button-contact-sidebar {
     width: 13rem;
-    padding: 0.5rem;
+    height: 2.7rem;
+    display: flex;
     border-radius: 15px;
-    align-self: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(11, 25, 32, 0.75); 
+    backdrop-filter: blur(5px); 
+    color: #fff; 
+    border: none; 
 }
 
 

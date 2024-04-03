@@ -1,0 +1,6 @@
+.form-create-news {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    background:linear-gradient(90deg, #0E212C, #1A3645);
+}

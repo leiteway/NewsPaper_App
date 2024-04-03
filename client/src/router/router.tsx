@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import SignInSide from "../components/registerForm/SingIn";
 import LayoutPublic from "../components/LayoutPublic";
 import SideBar from "../components/sideBar/SideBar";
+import FormCreateNews from "../components/formCreateNews/FormCreateNews";
 // import Home from "../components/home/Home";
-
 // import RegisterForm from "../components/registerForm/RegisterForm";
 // import NewPost from "../components/newPost/NewPost";
 // import EditPost from "../components/editPost/EditPost";
@@ -45,6 +45,11 @@ export const router = createBrowserRouter([
     {
       path: "/SideBar",
       element: <SideBar/>
+    },
+
+    {
+      path: "/FormCreateNews",
+      element: <FormCreateNews/>
     }
   ],
   }
