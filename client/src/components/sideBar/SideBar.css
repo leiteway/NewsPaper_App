@@ -1,4 +1,4 @@
-.sideBar-container {
+.sidebar-container {
     width: 20rem;
     height: 100rem;
     background: linear-gradient(90deg, #0E212C, #1A3645);
@@ -16,13 +16,14 @@ hr {
 }
 
 .text-sidebar {
+    display: flex;
     color: #fff;
     padding: 10% 20%;
+    align-content: center;
     
 }
 
 .title-sidebar {
-    /* color: linear-gradient(80deg, #fff, #000); */
     color: transparent;
     background-image: linear-gradient(60deg, #fff, #000);
     background-clip: text;
@@ -32,6 +33,56 @@ hr {
     font-size: 1.2rem;
 }
 
-.icons-sidebar {
-    width: 12rem;
+.social-icons-sidebar {
+    width: 10rem;
+    margin-left: 3.5rem;
 }
+
+.icon-sidebar {
+    padding-right: 2rem;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+}
+.contact-bg {
+    z-index: 0;
+}
+.text-contact-sidebar {
+    color: #fff;
+    z-index: 1;
+}
+
+.contact-container {
+    position: relative;
+    align-items: center;
+}
+
+.contact-bg {
+    position: absolute;
+    width: 15rem;
+    height:15rem;
+    z-index: 0;
+    border-radius: 40px; 
+}
+
+.icon-contact-sidebar, .text-contact-sidebar ,.button-contact-sidebar  {
+    position: relative;
+    z-index: 1; 
+    display: flex;
+}
+
+.icon-contact-sidebar{
+    width: 2rem;
+    padding: 2rem;
+}
+
+.button-contact-sidebar {
+    width: 13rem;
+    padding: 0.5rem;
+    border-radius: 15px;
+    align-self: center;
+}
+
+
