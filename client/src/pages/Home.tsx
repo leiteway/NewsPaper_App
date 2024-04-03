@@ -1,5 +1,4 @@
-///import Card1 from "../components/card/Card1";
-import Card from "../components/card/card";
+import Card from "../components/card/CardSmall";
 
 
 

@@ -5,7 +5,7 @@ import Home from "../pages/Home"
 import RegisterForm from "../components/registerForm/RegisterForm";
 // import NewPost from "../components/newPost/NewPost";
 // import EditPost from "../components/editPost/EditPost";
-import Card from "../components/card/card";
+import Card from "../components/card/CardSmall";
 
 
 export const router = createBrowserRouter([
