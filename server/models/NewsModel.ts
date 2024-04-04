@@ -13,7 +13,7 @@ const NewsModel = connection_db.define('News', {
  title:{
     type: DataTypes.STRING(50),
     allowNull: false
- },
+ }, 
  content:{
     type: DataTypes.TEXT,
     allowNull: false
