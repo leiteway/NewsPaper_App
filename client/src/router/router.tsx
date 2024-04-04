@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import SignIn from "../components/registerForm/SignIn";
-// import LayoutPublic from "../components/layout/";
-import Home from "../pages/Home"
-import RegisterForm from "../components/registerForm/RegisterForm";
-// import NewPost from "../components/newPost/NewPost";
+import SignInSide from "../components/registerForm/SingIn";
+import LayoutPublic from "../components/LayoutPublic";
+// import Home from "../components/home/Home";
+// import RegisterForm from "../components/registerForm/RegisterForm";
+import NewPost from "../pages/NewPost";
 // import EditPost from "../components/editPost/EditPost";
 import Card from "../components/card/CardSmall";
 
@@ -11,7 +11,7 @@ import Card from "../components/card/CardSmall";
 export const router = createBrowserRouter([
   {
       path: "/",
-      // element: <LayoutPublic />,
+      element: <LayoutPublic />,
       children: [
     
     {
@@ -28,7 +28,7 @@ export const router = createBrowserRouter([
     },
     {
       path: "/NewPost",
-      // element: <NewPost/>,
+      element: <NewPost/>,
     },
     {
       path: "/EditPost/:id",
