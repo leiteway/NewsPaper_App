@@ -1,11 +1,18 @@
-import Card from "../components/card/CardSmall";
-
-
+import CardSmall from "../components/card/CardSmall";
+import SideBar from "../components/sideBar/SideBar";
 
 const Home = () => {
   return (
     <div>
-      <Card/>
+      <div className="side-bar-container">
+        <SideBar/>
+      </div>
+
+      <div className="card-container">
+        <CardSmall/>
+      </div>
+
+      
     </div>
   )
 }
