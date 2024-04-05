@@ -17,3 +17,5 @@ export const registerUser = async (data: RegisterData) => {
     throw error;
   }
 };
+
+export default registerUser;
