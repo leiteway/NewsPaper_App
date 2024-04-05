@@ -1,14 +1,23 @@
+import { useForm } from 'react-hook-form';
+
+type LoginData = {
+  email: string;
+  password: string;
+};
+
+export const SignIn: React.FC = () => {
+  const { register, handleSubmit } = useForm<LoginData>();
+  const onSubmit = (data: LoginData) => console.log(data);
 
 
-export const SignIn = () => {
   return (
     <div>
       <h1>Sign In</h1>
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" />
+        <input {...register('email')} type="email" id="email" name="email" />
         <label htmlFor="password">Password</label>
-        <input type="password" id="password" name="password" />
+        <input {...register('password')}type="password" id="password" name="password" />
         <button type="submit">Sign In</button>
       </form>
       
