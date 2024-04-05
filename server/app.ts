@@ -6,8 +6,11 @@ import NewsModel from "./models/NewsModel";
 import NewsRouter from "./routes/NewsRouter"
 import AuthRouter from "./routes/AuthRouter";
 import UserRouter from "./routes/UserRouter"
+import cors from 'cors';
+
 export const app = express();
 
+app.use(cors());
 app.use(express.json()); // para que la aplicacion pueda soportar formato json desde postman (Middleware para parsear el cuerpo de las solicitudes en formato JSON)
 
 app.use("/api/news", NewsRouter)
@@ -15,6 +18,7 @@ app.use("/api/news", NewsRouter)
 app.use("/api/auth", AuthRouter)
 
 app.use("/api/user", UserRouter)
+
 
     try {
     connection_db.authenticate();
