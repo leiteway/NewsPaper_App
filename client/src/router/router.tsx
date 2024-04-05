@@ -6,7 +6,7 @@ import Home from "../pages/Home";
 // import RegisterForm from "../components/registerForm/RegisterForm";
 import NewPost from "../pages/NewPost";
 // import EditPost from "../components/editPost/EditPost";
-import CardSmall from "../components/card/CardSmall";
+// import CardSmall from "../components/card/CardSmall";
 
 
 export const router = createBrowserRouter([
@@ -35,10 +35,9 @@ export const router = createBrowserRouter([
       path: "/EditPost/:id",
       // element: <EditPost/>
     },
-   
     {
       path: "/card/:id",
-      element: <CardSmall/>
+      // element: <CardSmall/>
     }
   ],
   }
