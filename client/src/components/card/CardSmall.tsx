@@ -19,9 +19,9 @@ import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 
 
-import { getNews, deleteNews } from '../../services/newsservice';
+//import { getNews, deleteNews,  } from '../../services/newsservice';
 
-import { useNavigate } from "react-router-dom"; 
+//import { useNavigate } from "react-router-dom"; 
 
 //import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 //import { sx } from '@material-ui/system';
@@ -163,7 +163,7 @@ export default function RecipeReviewCard() {
         </IconButton>
 
 
-        <IconButton onClick={() => navigate(`/Edit/${new.id}`)}
+        <IconButton
           sx={{
             color: 'white',
            
@@ -176,9 +176,7 @@ export default function RecipeReviewCard() {
           <EditOutlinedIcon/>
         </IconButton>
 
-        <IconButton onClick={() => { const confirmDelete = window.confirm('¿Deseas eliminar esta noticia?'); 
-        if (confirmDelete) { handleDelete(bicycle.id, bicycle.image); navigate(0)}}}
-        sx={{
+        <IconButton sx={{
             color: 'white',
            
             '&:hover': {
