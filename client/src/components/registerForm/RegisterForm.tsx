@@ -13,7 +13,9 @@ interface FormValues {
 }
 
 export const RegisterForm: React.FC = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm<FormValues>();
+  const { register, handleSubmit } = useForm<FormValues>();
+
+  //formState: { errors } 
 
   const onSubmit = async (data: FormValues) => {
     try {

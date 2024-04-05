@@ -1,15 +1,18 @@
 import axios from 'axios';
 
 interface RegisterData {
-  username: string;
+  name: string;
   password: string;
   email: string;
 }
 
+const url = "http://localhost:5000/api/auth/register";
+
 export const registerUser = async (data: RegisterData) => {
   try {
-    const response = await axios.post('http://localhost:5000/register', data);
+    const response = await axios.post(`${url}`, data);
     if (response.data.token) {
+      console.log('Token recibido:', response.data.token);
       localStorage.setItem('token', response.data.token);
     }
     return response.data;
