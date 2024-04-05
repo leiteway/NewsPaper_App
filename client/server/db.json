@@ -1,55 +1,38 @@
 {
 
-    'News': [
-       
-    { 
-        "id": "01",
-        "category": "Open AI",
-        "description":"OpenAI lanza DALL-E 3, un modelo de IA que genera imágenes realistas a partir de descripciones textuales: un hito en la generación infinita de este tipo de creaciones.",
-        "content":"OpenAI, la organización de investigación sin fines de lucro fundada por Elon Musk, ha dado un paso de gigante en el campo de la inteligencia artificial con el lanzamiento de DALL-E 3.
-        Este nuevo modelo de IA no solo es capaz de generar imágenes realistas a partir de descripciones textuales, sino que también permite un control creativo sin precedentes sobre el resultado final. DALL-E 3 funciona utilizando un sistema de aprendizaje profundo que ha sido entrenado con un conjunto de datos masivo de imágenes y texto. Esto le permite comprender las relaciones entre las palabras y las imágenes, y traducir las descripciones textuales en representaciones visuales de alta calidad.DALL-E 3 aún se encuentra en fase beta, pero ya ha generado un gran interés en la comunidad artística y tecnológica. Su capacidad para crear imágenes realistas a partir de la imaginación abre un nuevo mundo de posibilidades para la creación de contenido visual.
-        
-        Este lanzamiento marca un hito importante en el desarrollo de la inteligencia artificial. DALL-E 3 es un ejemplo del potencial que tiene la IA para transformar la forma en que creamos y consumimos contenido visual.
-        En un futuro próximo, podemos esperar que DALL-E 3 y otras tecnologías similares se integren en nuestras vidas de forma cada vez más profunda.
+    "News": [
 
-        Las aplicaciones de esta tecnología son vastas y podrían revolucionar industrias como la publicidad, el diseño, la educación y el entretenimiento.
-        Sin duda, DALL-E 3 es un avance significativo en el campo de la IA y un paso emocionante hacia un futuro donde la imaginación es el único límite.",
+    { 
+        "id": "1",
+        "title": "Open AI",
+        "description":"OpenAI lanza DALL-E 3, un modelo de IA que genera imágenes realistas a partir de descripciones textuales: un hito en la generación infinita de este tipo de creaciones.",
+        "content": "OpenAI, la organización de investigación sin fines de lucro fundada por Elon Musk, ha dado un paso de gigante en el campo de la inteligencia artificial con el lanzamiento de DALL-E 3. Este nuevo modelo de IA no solo es capaz de generar imágenes realistas a partir de descripciones textuales, sino que también permite un control creativo sin precedentes sobre el resultado final. DALL-E 3 funciona utilizando un sistema de aprendizaje profundo que ha sido entrenado con un conjunto de datos masivo de imágenes y texto. Esto le permite comprender las relaciones entre las palabras y las imágenes, y traducir las descripciones textuales en representaciones visuales de alta calidad.DALL-E 3 aún se encuentra en fase beta, pero ya ha generado un gran interés en la comunidad artística y tecnológica. Su capacidad para crear imágenes realistas a partir de la imaginación abre un nuevo mundo de posibilidades para la creación de contenido visual. Este lanzamiento marca un hito importante en el desarrollo de la inteligencia artificial. DALL-E 3 es un ejemplo del potencial que tiene la IA para transformar la forma en que creamos y consumimos contenido visual. En un futuro próximo, podemos esperar que DALL-E 3 y otras tecnologías similares se integren en nuestras vidas de forma cada vez más profunda. Las aplicaciones de esta tecnología son vastas y podrían revolucionar industrias como la publicidad, el diseño, la educación y el entretenimiento. Sin duda, DALL-E 3 es un avance significativo en el campo de la IA y un paso emocionante hacia un futuro donde la imaginación es el único límite.",
     
         "date":"date",
         "image":"../src/assets/images/noticia-apple.webp",
         "user_id":""
     },
     { 
-        "id": "02",
-        "category":"Vue.js",
+        "id": "2",
+        "title":"Vue.js",
         "description":"Se lanza la nueva versión de Vue.js 3, con nuevas características y mejoras: nuevas funciones y mejoras para la creación de interfaces web.",
-        "content":"Vue.js 3 ya está aquí: Nuevas funciones y mejoras para la creación de interfaces web. La comunidad de Vue.js está de celebración con el lanzamiento oficial de la versión 3 de este popular framework para el desarrollo de interfaces web. Vue.js 3 trae consigo una serie de nuevas características y mejoras que lo convierten en una herramienta aún más potente y flexible para crear aplicaciones web modernas.
-        
-        Entre las novedades más destacadas de Vue.js 3 encontramos:
-        
-        · Composición API: Una nueva forma de escribir componentes Vue que facilita la reutilización del código y la creación de interfaces más complejas.
-        · Soporte nativo para TypeScript: Vue.js 3 ahora incluye soporte completo para TypeScript, lo que permite a los desarrolladores aprovechar las ventajas de este lenguaje para escribir código más robusto y escalable.
-        · Mejoras en el rendimiento: Vue.js 3 ha sido optimizado para ofrecer un rendimiento aún mejor que las versiones anteriores, lo que se traduce en aplicaciones web más fluidas y receptivas.
-        · Nueva sintaxis de plantillas: Vue.js 3 introduce una nueva sintaxis de plantillas más concisa y expresiva que facilita la escritura de código HTML.
-        ·Soporte para SFCs (Single File Components): Vue.js 3 ahora permite escribir componentes en un solo archivo, lo que facilita la organización del código y la colaboración entre equipos.
-        
-        En resumen, Vue.js 3 es una actualización importante que trae consigo una serie de nuevas características y mejoras que lo convierten en una herramienta aún más poderosa y flexible para crear interfaces web modernas. Si estás buscando un framework para el desarrollo de interfaces web que sea fácil de aprender, eficiente y con una gran comunidad de desarrolladores, Vue.js 3 es una excelente opción.",
+        "content":"Vue.js 3 ya está aquí: Nuevas funciones y mejoras para la creación de interfaces web. La comunidad de Vue.js está de celebración con el lanzamiento oficial de la versión 3 de este popular framework para el desarrollo de interfaces web. Vue.js 3 trae consigo una serie de nuevas características y mejoras que lo convierten en una herramienta aún más potente y flexible para crear aplicaciones web modernas. Entre las novedades más destacadas de Vue.js 3 encontramos: · Composición API: Una nueva forma de escribir componentes Vue que facilita la reutilización del código y la creación de interfaces más complejas. · Soporte nativo para TypeScript: Vue.js 3 ahora incluye soporte completo para TypeScript, lo que permite a los desarrolladores aprovechar las ventajas de este lenguaje para escribir código más robusto y escalable. · Mejoras en el rendimiento: Vue.js 3 ha sido optimizado para ofrecer un rendimiento aún mejor que las versiones anteriores, lo que se traduce en aplicaciones web más fluidas y receptivas. · Nueva sintaxis de plantillas: Vue.js 3 introduce una nueva sintaxis de plantillas más concisa y expresiva que facilita la escritura de código HTML. ·Soporte para SFCs (Single File Components): Vue.js 3 ahora permite escribir componentes en un solo archivo, lo que facilita la organización del código y la colaboración entre equipos. En resumen, Vue.js 3 es una actualización importante que trae consigo una serie de nuevas características y mejoras que lo convierten en una herramienta aún más poderosa y flexible para crear interfaces web modernas. Si estás buscando un framework para el desarrollo de interfaces web que sea fácil de aprender, eficiente y con una gran comunidad de desarrolladores, Vue.js 3 es una excelente opción.",
         "date":"date1",
         "image":"../src/assets/images/noticia-vue.webp",
-        "user_id":"",
+        "user_id":""
     },
     { 
         "id": "",
-        "category":"",
+        "title":"",
         "description": "",
         "content": "",
         "date":"",
         "image":"",
-        "user_id":"",
+        "user_id":""
     },
     { 
         "id": "",
-        "category":"",
+        "title":"",
         "description":"",
         "content":"",
         "date":"",
@@ -58,7 +41,7 @@
     },
     { 
         "id": "",
-        "category":"",
+        "title":"",
         "description":"",
         "content":"",
         "date":"",
@@ -67,7 +50,7 @@
     },
     { 
         "id": "",
-        "category":"",
+        "title":"",
         "description":"",
         "content":"",
         "date":"",
@@ -76,7 +59,7 @@
     },
     { 
         "id": "",
-        "category":"",
+        "title":"",
         "description":"Figma se consolida como una herramienta esencial para el diseño de interfaces de usuario, se ha convertido en la herramienta de referencia para la creación de webs de todo el mundo",
         "content":"",
         "date":"",
@@ -85,39 +68,20 @@
     },
     { 
         "id": "",
-        "category":"JavaScript",
+        "title":"JavaScript",
         "description":"JavaScript sigue siendo el rey para los developers de todo el mundo, continúa dominando el panorama del desarrollo web como el lenguaje de programación más popular",
-        "content":"Su versatilidad, flexibilidad y amplia adopción lo convierten en la herramienta fundamental para crear interfaces de usuario interactivas y dinámicas.
-        A diferencia de otros lenguajes, JavaScript se ejecuta tanto en el lado del cliente como del servidor, lo que le da una gran flexibilidad para crear aplicaciones web completas. Permite a los desarrolladores crear interfaces de usuario receptivas que se adaptan a diferentes dispositivos y tamaños de pantalla, una característica crucial en el mundo actual donde la navegación web móvil es omnipresente.
-        
-        La comunidad de JavaScript es vibrante y activa, con una gran cantidad de recursos disponibles en línea. Esto facilita a los desarrolladores aprender y encontrar soluciones a los desafíos que puedan enfrentar. Además, la existencia de frameworks populares como React, Angular y Vue.js simplifica la creación de aplicaciones web complejas y escalables.
-        
-        Si bien hay otros lenguajes que emergen en el panorama del desarrollo web, JavaScript sigue siendo la opción más popular y confiable. Su amplia adopción, flexibilidad y comunidad activa lo convierten en una herramienta indispensable para cualquier desarrollador web.
-        
-        Aquí hay algunos ejemplos de empresas que utilizan JavaScript:
-        Google: Google utiliza JavaScript para crear una amplia gama de productos, como Google Search, Google Maps y Gmail.
-        Facebook: Facebook utiliza JavaScript para crear sus productos, como Facebook, Instagram y WhatsApp.
-        Amazon: Amazon utiliza JavaScript para crear su sitio e-commerce y otros productos como Amazon Web Services.
-        ",
+        "content":"Su versatilidad, flexibilidad y amplia adopción lo convierten en la herramienta fundamental para crear interfaces de usuario interactivas y dinámicas. A diferencia de otros lenguajes, JavaScript se ejecuta tanto en el lado del cliente como del servidor, lo que le da una gran flexibilidad para crear aplicaciones web completas. Permite a los desarrolladores crear interfaces de usuario receptivas que se adaptan a diferentes dispositivos y tamaños de pantalla, una característica crucial en el mundo actual donde la navegación web móvil es omnipresente. La comunidad de JavaScript es vibrante y activa, con una gran cantidad de recursos disponibles en línea. Esto facilita a los desarrolladores aprender y encontrar soluciones a los desafíos que puedan enfrentar. Además, la existencia de frameworks populares como React, Angular y Vue.js simplifica la creación de aplicaciones web complejas y escalables. Si bien hay otros lenguajes que emergen en el panorama del desarrollo web, JavaScript sigue siendo la opción más popular y confiable. Su amplia adopción, flexibilidad y comunidad activa lo convierten en una herramienta indispensable para cualquier desarrollador web. Aquí hay algunos ejemplos de empresas que utilizan JavaScript: Google: Google utiliza JavaScript para crear una amplia gama de productos, como Google Search, Google Maps y Gmail. Facebook: Facebook utiliza JavaScript para crear sus productos, como Facebook, Instagram y WhatsApp. Amazon: Amazon utiliza JavaScript para crear su sitio e-commerce y otros productos como Amazon Web Services.",
         "date":"date8",
         "image":"",
         "user_id":""
     },
     { 
         "id": "9",
-        "category": "AppleVision Pro",
+        "title": "AppleVision Pro",
         "description":"Las primeras criticas de los usuarios a las gafas de realidad mixta Apple Vision Pro por su precio (3.499 dólares) y su falta de aplicaciones prácticas.",
-        "content": "Apple presentó las Vision Pro el pasado mes de junio de 2023 durante la celebración de la Conferencia Mundial de Desarrolladores (WWDC). Sin embargo, no las puso a la venta hasta el 2 de febrero de 2024. Eso sí, solo en Estados Unidos, por lo que para comprarlas desde España es necesario acudir a la reventa en eBay. Algo que, además, presenta otros muchos inconvenientes, como pueden ser problemas de ajuste o falta de adaptación de la lente a las necesidades visuales del usuario.,
-     
-        Todo esto, unido a que su precio de partida es de 3.499 dólares (unos 3.270 euros al cambio) ha hecho que muchos usuarios prefieran otras alternativas. Al menos, hasta que Apple decida venderlas en el resto del mundo o aparezcan generaciones posteriores que pulan los defectos de la primera versión. Sin embargo, elegir el modelo adecuado no es fácil, ya que el mercado es mucho más amplio de lo que parece.
-        En cualquier caso, las Vision Pro tienen una gran competidora en el sector de la realidad mixta, que combina realidad aumentada y realidad virtual. Es una creación de Meta, la compañía matriz de Facebook e Instagram. Mark Zuckerberg, su CEO, afirma haber probado el producto de Apple, tras lo cual concluyó que sus Meta Quest 3 son el mejor producto, punto.
-        
-        El citado Mark Zuckerberg quiso eclipsar parcialmente la presentación de las Apple Vision Pro anunciando que las Meta Quest 3 llegarían al mercado en octubre de 2023. Unas gafas de realidad mixtas mucho más económicas (la versión de 128 GB tuvo un precio de salida de 549 euros, mientras que la de 512 GB se empezó a vender por 699 euros) y que, según el CEO de Meta, son perfectamente capaces de satisfacer las necesidades de realidad mixta de la inmensa mayoría de usuarios",
+        "content": "Apple presentó las Vision Pro el pasado mes de junio de 2023 durante la celebración de la Conferencia Mundial de Desarrolladores (WWDC). Sin embargo, no las puso a la venta hasta el 2 de febrero de 2024. Eso sí, solo en Estados Unidos, por lo que para comprarlas desde España es necesario acudir a la reventa en eBay. Algo que, además, presenta otros muchos inconvenientes, como pueden ser problemas de ajuste o falta de adaptación de la lente a las necesidades visuales del usuario. Todo esto, unido a que su precio de partida es de 3.499 dólares (unos 3.270 euros al cambio) ha hecho que muchos usuarios prefieran otras alternativas. Al menos, hasta que Apple decida venderlas en el resto del mundo o aparezcan generaciones posteriores que pulan los defectos de la primera versión. Sin embargo, elegir el modelo adecuado no es fácil, ya que el mercado es mucho más amplio de lo que parece. En cualquier caso, las Vision Pro tienen una gran competidora en el sector de la realidad mixta, que combina realidad aumentada y realidad virtual. Es una creación de Meta, la compañía matriz de Facebook e Instagram. Mark Zuckerberg, su CEO, afirma haber probado el producto de Apple, tras lo cual concluyó que sus Meta Quest 3 son el mejor producto, punto. El citado Mark Zuckerberg quiso eclipsar parcialmente la presentación de las Apple Vision Pro anunciando que las Meta Quest 3 llegarían al mercado en octubre de 2023. Unas gafas de realidad mixtas mucho más económicas (la versión de 128 GB tuvo un precio de salida de 549 euros, mientras que la de 512 GB se empezó a vender por 699 euros) y que, según el CEO de Meta, son perfectamente capaces de satisfacer las necesidades de realidad mixta de la inmensa mayoría de usuarios",
         "date":"date9",
         "image":"../images/apple-vision-pro.jpg",
         "user_id":""
-    }
-    
-    ]
-    
-    }
+    }]
+}
