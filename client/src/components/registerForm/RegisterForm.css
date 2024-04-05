@@ -1,19 +1,20 @@
-.container {
+.container-form {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .image-container {
   position: relative;
-  width: 55%;
+  width: 55vw;
   height: 100vh;
 }
 
 .logo {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 1.25rem;
+  left: 1.25rem;
   z-index: 1;
 }
 
@@ -24,69 +25,70 @@
   transform: translate(-50%, -50%);
   z-index: 1;
   text-align: center;
-  font-family: open-sans, sans-serif;
 }
 
-h1 {
+.title-container h1 {
   color: #fff;
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 
-p {
+.title-container p {
   color: #fff;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .image-side {
   width: 100%;
   height: 100vh;
-  background-image: url('https://raw.githubusercontent.com/pointfs/NEWSPAPER/feature-forms-register/client/src/assets/images/5052197.jpg');
+  background-image: url('https://raw.githubusercontent.com/pointfs/NEWSPAPER/feature-forms-register/client/src/assets/images/background-img-form-signin.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .form {
-  gap: 20px;
+  gap: 1.25rem;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 30px;
-  margin: 0 200px;
-  border: solid 2px #1A3645;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #1A3645;
+
+  
+  padding: 1.5rem 1.875rem;
+  margin: 0 8rem;
+
+  border: solid 0.125rem #1A3645;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 0.625rem #1A3645;
   background: linear-gradient(70deg, #071a21, #041116);
   color: #fff;
-  font-family: open-sans, sans-serif;
 }
 
 .form h5 {
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
 }
 
 .or-subtitle {
-  margin: 20px ;
+  margin: 1.25rem;
   width: 100%;
-  border-bottom: 2px solid #254d63;
+  border-bottom: 0.125rem solid #254d63;
 }
 
 .social-login {
   display: flex;
-  gap: 20px;
-  padding: 10px;
+  gap: 1.25rem;
+  padding: 0.625rem;
 }
 
 .social-login a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  border: solid 2px #1A3645;
-  border-radius: 10px; /* Ajusta este valor según sea necesario */
-  box-shadow: 0 0 10px #1A3645;
+  padding: 0.625rem;
+  border: solid 0.125rem #1A3645;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 0.625rem #1A3645;
   background: linear-gradient(70deg, #071a21, #041116);
   color: #fff;
   font-weight: bold;
@@ -97,21 +99,107 @@ p {
 .social-login img {
   display: flex;
   flex-direction: column;
-  width: 45px;
-  height: 40px;
+  width: 2.8125rem;
+  height: 2.5rem;
 }
 
 label {
+  font-size: 0.9rem;
   display: flex;
   flex-direction: column;
   align-items: left;
-  gap: 10px;
-
+  gap: 0.625rem;
 }
 
-label input{
-  padding: 10px;
-  margin: 0px 10px;
-  border-radius: 10px;
-  border: solid 2px #1A3645;
+label input {
+  padding: 0.625rem 0.7rem;
+  width: 15rem;
+  border-radius: 0.625rem;
+  border: solid 0.125rem #1A3645;
+  background-color: #071a21;
+  color: #fff;
+  text-align: left;
+}
+
+label input:focus {
+  outline: none;
+}
+
+.rememberme-check-box {
+  width: 1.25rem;
+}
+
+.rememberme-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.rememberme-container .rememberme-check-box {
+  position: relative;
+  padding: 0.625rem 2rem;
+  appearance: none;
+  background: #c6c6c6;
+  outline: none;
+  border-radius: 1rem;
+  transition: background 0.5s;
+}
+
+.rememberme-container .rememberme-check-box:checked {
+  background: #30637C;
+}
+
+.rememberme-container .rememberme-check-box:before {
+  content: '';
+  position: absolute;
+  width: 0.875rem;
+  height: 0.875rem;
+  border-radius: 50%;
+  top: 0.2rem;
+  left: 0.2rem;
+  background: #fff;
+  transform: scale(1.1);
+  transition: left 0.5s;
+}
+
+.rememberme-container .rememberme-check-box:checked:before {
+  left: 3rem;
+}
+
+.form button {
+  padding: 0.9rem 6.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.625rem;
+  border: solid 0.125rem #1A3645;
+  background-color: #30637C;
+  color: #fff;
+  font-weight: light;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background-color: #478FB4;
+}
+
+.login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.login-button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.login-button a:hover {
+  text-decoration: underline;
+  color: #478FB4;
 }

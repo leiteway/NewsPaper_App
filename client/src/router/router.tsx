@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 //import SignInSide from "../components/registerForm/SingIn";
+//import SignInSide from "../components/registerForm/SingIn";
 import LayoutPublic from "../components/LayoutPublic";
+import Home from "../pages/Home";
+//import SideBar from "../components/sideBar/SideBar";
 import Home from "../pages/Home";
 //import SideBar from "../components/sideBar/SideBar";
 // import RegisterForm from "../components/registerForm/RegisterForm";
@@ -21,11 +24,11 @@ export const router = createBrowserRouter([
     },
     {
         path: "/Register",
-        //element: <RegisterForm/>,
+        element: <RegisterForm/>,
     },
     {
         path: "/",
-        element: <Home/>,
+        // element: <Home/>,
     },
     {
       path: "/NewPost",
@@ -35,10 +38,9 @@ export const router = createBrowserRouter([
       path: "/EditPost/:id",
       // element: <EditPost/>
     },
-   
     {
       path: "/card/:id",
-      element: <CardSmall/>
+      // element: <CardSmall/>
     }
   ],
   }
