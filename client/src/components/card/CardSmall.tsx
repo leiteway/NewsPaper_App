@@ -18,6 +18,11 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 
+
+import { getNews, deleteNews } from '../../services/newsservice';
+
+import { useNavigate } from "react-router-dom"; 
+
 //import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 //import { sx } from '@material-ui/system';
 
@@ -27,6 +32,8 @@ interface ExpandMoreProps extends IconButtonProps {
 }
 
 const link = "https://www.google.com/";
+/*const navigate = useNavigate(); */
+
 
 const ExpandMore = styled((props: ExpandMoreProps) => {
   const { expand, ...other } = props;
@@ -156,7 +163,8 @@ export default function RecipeReviewCard() {
         </IconButton>
 
 
-        <IconButton sx={{
+        <IconButton onClick={() => navigate(`/Edit/${new.id}`)}
+          sx={{
             color: 'white',
            
             '&:hover': {
@@ -168,7 +176,9 @@ export default function RecipeReviewCard() {
           <EditOutlinedIcon/>
         </IconButton>
 
-        <IconButton sx={{
+        <IconButton onClick={() => { const confirmDelete = window.confirm('¿Deseas eliminar esta noticia?'); 
+        if (confirmDelete) { handleDelete(bicycle.id, bicycle.image); navigate(0)}}}
+        sx={{
             color: 'white',
            
             '&:hover': {
@@ -176,7 +186,7 @@ export default function RecipeReviewCard() {
             },
         }}
         
-        aria-label="edit">
+        aria-label="delete">
           <DeleteOutlineOutlinerIcon/>
         </IconButton>
 
