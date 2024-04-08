@@ -5,6 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import AppleIcon from '@mui/icons-material/Apple';
 import GoogleIcon from '@mui/icons-material/Google';
 import registerUser from '../../services/register-services';
+import { useNavigate } from 'react-router-dom';
 
 interface FormValues {
   name: string;
@@ -13,6 +14,7 @@ interface FormValues {
 }
 
 export const RegisterForm: React.FC = () => {
+  const navigate = useNavigate();
   const { register, handleSubmit } = useForm<FormValues>();
 
   //formState: { errors } 
@@ -23,10 +25,7 @@ export const RegisterForm: React.FC = () => {
       if (registrationResult.success) {
         console.log('Usuario registrado exitosamente');
         // Redirige al usuario o realiza alguna otra acción después del registro exitoso
-      } else {
-        console.error('Error al registrar usuario:', registrationResult.message);
-        // Maneja errores de registro, por ejemplo, muestra un mensaje al usuario
-      }
+      } 
     } catch (error) {
       console.error('Error al registrar usuario:', error);
       // Maneja errores de conexión u otros errores del lado del cliente
@@ -68,7 +67,7 @@ export const RegisterForm: React.FC = () => {
           <input {...register('password')} required type="password" />
         </label>
         
-        <button type="submit">Registrarse</button>
+        <button onClick={() => navigate("/login")} type="submit">Registrarse</button>
 
         <div className='login-button'>
           ¿Tienes una cuenta? <a href="/login"> Entra aquí</a>
