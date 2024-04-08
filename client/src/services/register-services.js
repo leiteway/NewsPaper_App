@@ -1,14 +1,8 @@
 import axios from 'axios';
 
-interface RegisterData {
-  name: string;
-  password: string;
-  email: string;
-}
-
 const url = "http://localhost:5000/api/auth/register";
 
-export const registerUser = async (data: RegisterData) => {
+export const createUser = async (data) => {
   try {
     const response = await axios.post(`${url}`, data);
     if (response.data.token) {
@@ -21,4 +15,4 @@ export const registerUser = async (data: RegisterData) => {
   }
 };
 
-export default registerUser;
+export default createUser;
