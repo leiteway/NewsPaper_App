@@ -7,7 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
-import IconButton /* { IconButtonProps } */ from '@mui/material/IconButton';
+import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -19,7 +19,7 @@ import Button from '@mui/material/Button';
 /* import Link from '@mui/material/Link';
  */
 
-/* import { getAllNews, deletePost, getOnePost  } from '../../services/newsServices'; */
+import { getAllNews, deletePost, getOnePost  } from '../../services/newsServices';
 
 import { useNavigate, useParams, /* useState  */} from "react-router-dom"; 
 
@@ -31,13 +31,26 @@ const navigate = useNavigate();
 const [expanded, setExpanded] = React.useState(false);
 /* const link = "http://localhost:3000/news/${id}";*/
 
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const Card = ({title, description, content, image, date, user_id }) => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://tu-servidor.com/api/ruta');
+        setData(response.data);
+      } catch (error) {
+        console.error('Error al obtener los datos:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
 
-
-
-const CardSmall  = ({title, description, content, image, date, user_id }) => {
-/* const [expanded, setExpanded] = React.useState(false); */
- 
 return (
     <Card sx= {{ 
         background: 'linear-gradient(90deg, #0E212C, #1A3645)', 

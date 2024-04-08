@@ -8,7 +8,7 @@
             "description":"OpenAI lanza DALL-E 3, un modelo de IA que genera imágenes realistas a partir de descripciones textuales: un hito en la generación infinita de este tipo de creaciones.",
             "content": "OpenAI, la organización de investigación sin fines de lucro fundada por Elon Musk, ha dado un paso de gigante en el campo de la inteligencia artificial con el lanzamiento de DALL-E 3. Este nuevo modelo de IA no solo es capaz de generar imágenes realistas a partir de descripciones textuales, sino que también permite un control creativo sin precedentes sobre el resultado final. DALL-E 3 funciona utilizando un sistema de aprendizaje profundo que ha sido entrenado con un conjunto de datos masivo de imágenes y texto. Esto le permite comprender las relaciones entre las palabras y las imágenes, y traducir las descripciones textuales en representaciones visuales de alta calidad.DALL-E 3 aún se encuentra en fase beta, pero ya ha generado un gran interés en la comunidad artística y tecnológica. Su capacidad para crear imágenes realistas a partir de la imaginación abre un nuevo mundo de posibilidades para la creación de contenido visual. Este lanzamiento marca un hito importante en el desarrollo de la inteligencia artificial. DALL-E 3 es un ejemplo del potencial que tiene la IA para transformar la forma en que creamos y consumimos contenido visual. En un futuro próximo, podemos esperar que DALL-E 3 y otras tecnologías similares se integren en nuestras vidas de forma cada vez más profunda. Las aplicaciones de esta tecnología son vastas y podrían revolucionar industrias como la publicidad, el diseño, la educación y el entretenimiento. Sin duda, DALL-E 3 es un avance significativo en el campo de la IA y un paso emocionante hacia un futuro donde la imaginación es el único límite.",
         
-            "date":"date",
+            "date":"date1",
             "image":"../src/assets/images/noticia-apple.webp",
             "user_id":""
         },
@@ -17,26 +17,26 @@
             "title":"Vue.js",
             "description":"Se lanza la nueva versión de Vue.js 3, con nuevas características y mejoras: nuevas funciones y mejoras para la creación de interfaces web.",
             "content":"Vue.js 3 ya está aquí: Nuevas funciones y mejoras para la creación de interfaces web. La comunidad de Vue.js está de celebración con el lanzamiento oficial de la versión 3 de este popular framework para el desarrollo de interfaces web. Vue.js 3 trae consigo una serie de nuevas características y mejoras que lo convierten en una herramienta aún más potente y flexible para crear aplicaciones web modernas. Entre las novedades más destacadas de Vue.js 3 encontramos: · Composición API: Una nueva forma de escribir componentes Vue que facilita la reutilización del código y la creación de interfaces más complejas. · Soporte nativo para TypeScript: Vue.js 3 ahora incluye soporte completo para TypeScript, lo que permite a los desarrolladores aprovechar las ventajas de este lenguaje para escribir código más robusto y escalable. · Mejoras en el rendimiento: Vue.js 3 ha sido optimizado para ofrecer un rendimiento aún mejor que las versiones anteriores, lo que se traduce en aplicaciones web más fluidas y receptivas. · Nueva sintaxis de plantillas: Vue.js 3 introduce una nueva sintaxis de plantillas más concisa y expresiva que facilita la escritura de código HTML. ·Soporte para SFCs (Single File Components): Vue.js 3 ahora permite escribir componentes en un solo archivo, lo que facilita la organización del código y la colaboración entre equipos. En resumen, Vue.js 3 es una actualización importante que trae consigo una serie de nuevas características y mejoras que lo convierten en una herramienta aún más poderosa y flexible para crear interfaces web modernas. Si estás buscando un framework para el desarrollo de interfaces web que sea fácil de aprender, eficiente y con una gran comunidad de desarrolladores, Vue.js 3 es una excelente opción.",
-            "date":"date1",
+            "date":"date2",
             "image":"../src/assets/images/noticia-vue.webp",
             "user_id":""
         },
         { 
             "id": "3",
-            "title":"",
-            "description": "",
-            "content": "",
-            "date":"",
-            "image":"",
+            "title":"Microsoft",
+            "description": "Microsoft adquiere Mandiant, una empresa de ciberseguridad, por 68.700 millones de dólares: un movimiento estratégico para fortalecer la seguridad cibernética",
+            "content": "En una adquisición histórica, Microsoft ha anunciado la compra de Mandiant, una empresa líder en ciberseguridad, por 68.700 millones de dólares. Esta operación, la mayor adquisición en la historia de Microsoft, reúne a dos de los nombres más importantes en el ámbito de la seguridad informática y tiene como objetivo fortalecer las defensas de las organizaciones frente a las crecientes amenazas cibernéticas.Mandiant es conocida por su experiencia en respuesta a incidentes de seguridad y por su inteligencia de amenazas. La empresa ha sido pionera en la investigación y el análisis de ataques cibernéticos de alto perfil, y ha ayudado a organizaciones de todo el mundo a recuperarse de graves intrusiones.Microsoft, por su parte, es un líder en soluciones de seguridad en la nube y endpoint. La empresa ofrece una amplia gama de productos y servicios de seguridad, como Microsoft Defender, Azure Security Center y Microsoft 365 Defender.La adquisición de Mandiant por parte de Microsoft tiene como objetivo crear una fuerza de seguridad cibernética sin precedentes. La combinación de ambas empresas permitirá ofrecer una gama más completa de soluciones de seguridad, desde la prevención y detección hasta la respuesta y la recuperación.Algunos analistas han expresado su preocupación por el impacto de la adquisición en la competencia en el mercado de la seguridad cibernética. Sin embargo, Microsoft ha declarado que se compromete a mantener la independencia de Mandiant y a seguir invirtiendo en sus capacidades de investigación y desarrollo.En definitiva, la adquisición de Mandiant por parte de Microsoft es un movimiento estratégico que tiene el potencial de transformar el panorama de la seguridad cibernética. La combinación de las capacidades de ambas empresas tiene el potencial de crear una fuerza de seguridad cibernética sin precedentes y de ofrecer una mejor protección a las organizaciones de todo el mundo.",
+            "date":"date3",
+            "image":"../src/assets/images/noticia-microsoft.webp",
             "user_id":""
         },
         { 
             "id": "4",
-            "title":"",
-            "description":"",
+            "title":"Samsung",
+            "description":"Samsung ha presentado oficialmente su nuevo smartphone flagship, el Galaxy S23: llega con una serie de mejoras que lo convierten en uno de los teléfonos más avanzados del mercado",
             "content":"",
             "date":"",
-            "image":"",
+            "image":"../src/assets/images/",
             "user_id":""
         },
         { 
