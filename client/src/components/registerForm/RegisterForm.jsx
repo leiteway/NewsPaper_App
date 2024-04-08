@@ -4,25 +4,24 @@ import './RegisterForm.css';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AppleIcon from '@mui/icons-material/Apple';
 import GoogleIcon from '@mui/icons-material/Google';
-import {registerUser} from '../../services/register-services';
+import createUser from '../../services/register-services';
+import { useNavigate } from 'react-router-dom';
 
 export const RegisterForm = () => {
+  const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
 
   //formState: { errors } 
 
   const onSubmit = async (data) => {
     try {
-      const registrationResult = await registerUser(data);
+      const registrationResult = await createUser(data);
       if (registrationResult.success) {
         console.log('Usuario registrado exitosamente');
         // Redirige al usuario o realiza alguna otra acción después del registro exitoso
-      } else {
-        console.error('Error al registrar usuario:', registrationResult.message);
-        // Maneja errores de registro, por ejemplo, muestra un mensaje al usuario
-      }
+      } 
     } catch (error) {
-      console.error('Error al registrar usuario2:', error);
+      console.error('Error al registrar usuario:', error);
       // Maneja errores de conexión u otros errores del lado del cliente
     }
   };

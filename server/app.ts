@@ -5,8 +5,8 @@ import UserModel from "./models/UserModel";
 import NewsModel from "./models/NewsModel";
 import NewsRouter from "./routes/NewsRouter"
 import AuthRouter from "./routes/AuthRouter";
-import UserRouter from "./routes/UserRouter";
-import cors from "cors"
+import UserRouter from "./routes/UserRouter"
+import cors from 'cors';
 
 export const app = express();
 
@@ -18,6 +18,7 @@ app.use("/api/news", NewsRouter)
 app.use("/api/auth", AuthRouter)
 
 app.use("/api/user", UserRouter)
+
 
     try {
     connection_db.authenticate();
