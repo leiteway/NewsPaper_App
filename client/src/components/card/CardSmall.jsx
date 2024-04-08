@@ -32,20 +32,10 @@ const [expanded, setExpanded] = React.useState(false);
 /* const link = "http://localhost:3000/news/${id}";*/
 
 
-interface CardProps {
-  expand: boolean;
-  id: string;
-  title: string;
-  description: string;
-  content: string;
-  image: string;
-  date: string;
-  user_id: string;
-}
 
 
 
-const CardSmall : React.FC<CardProps> = ({title, description, content, image, date, user_id }) => {
+const CardSmall  = ({title, description, content, image, date, user_id }) => {
 /* const [expanded, setExpanded] = React.useState(false); */
  
 return (

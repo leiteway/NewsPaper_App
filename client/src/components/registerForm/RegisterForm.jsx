@@ -6,16 +6,11 @@ import GoogleIcon from '@mui/icons-material/Google';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
 
-type FormData = {
-  name: string;
-  email: string;
-  password: string;
-  rememberMe: boolean;
-};
 
-export const RegisterForm: React.FC = () => {
-  const { register, handleSubmit } = useForm<FormData>();
-  const onSubmit = (data: FormData) => console.log(data);
+
+export const RegisterForm = () => {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => console.log(data);
 
   return (
     <div className="container-form">

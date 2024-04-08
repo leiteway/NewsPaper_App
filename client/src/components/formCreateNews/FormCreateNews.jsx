@@ -2,7 +2,7 @@ import './FormCreateNews.css'
 
 export default function FormCreateNews(){
   return (
-    <>
+    
         <form className="form-create-news"id="form-create-news" action="" method="">
 
             <div className="form-input">
@@ -38,7 +38,7 @@ export default function FormCreateNews(){
 
             
         </form>  
-    </>
+    
   )
 }
 

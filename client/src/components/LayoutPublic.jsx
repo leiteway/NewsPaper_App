@@ -1,7 +1,7 @@
 // import React from 'react';
 import { Outlet } from "react-router-dom";
-import NavBar from '../components/navBar/NavBar';
-import Footer from '../components/footer/Footer';
+import NavBar from './navBar/NavBar';
+import Footer from './footer/Footer';
 
 
 const LayoutPublic = () => {

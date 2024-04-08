@@ -16,7 +16,7 @@ export const getAllNews = async () => {
 };
 
 //Método DELETE
-export const deletePost = async (id: any) => { 
+export const deletePost = async () => { 
     if(confirm('¿Estás seguro de que quieres eliminar esta noticia?')=== true){
         const news =await axios.delete(`${url}/news/${id}`)
         return news
@@ -24,7 +24,7 @@ export const deletePost = async (id: any) => {
 };
 
 //Método POST
-export const addNewPost = async (data: any) => { 
+export const addNewPost = async () => { 
 
     const news = await axios.post(`${url}/news`, data) 
         alert("Noticia añadida correctamente")
@@ -32,14 +32,14 @@ export const addNewPost = async (data: any) => {
 };
 
 //Método GETONEPOST
-export const getOnePost = async (id: any) => { 
+export const getOnePost = async () => { 
     const response = await fetch(`${url}/news/${id}`); 
     const data = await response.json(); 
     return data; 
 };
 
 //Método PUT
-export const editPost = async (id: any, newData: any) => { 
+export const editPost = async () => { 
     console.log("Modificando la noticia");
 
     const response = await axios.put(`${url}/news/${id}`, newData, { 

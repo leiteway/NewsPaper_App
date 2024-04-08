@@ -3,19 +3,10 @@ import './CardHome.css'; // Asegúrate de tener este archivo CSS en el mismo dir
 // import { useNavigate } from 'react-router-dom';
 
 
-interface CardProps {
-    expand: boolean;
-    id: string;
-    title: string;
-    description: string;
-    content: string;
-    image: string;
-    date: string;
-    user_id: string;
-  }
 
 
-const CardHome = (props:CardProps) => {
+
+const CardHome = () => {
   return (
     <section className="cardHome">
         <div className="cardHome-image">

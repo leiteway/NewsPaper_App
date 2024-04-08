@@ -3,14 +3,14 @@ import SideBar from "../components/sideBar/SideBar";
 /* import { Typography, CardContent, CardActions, Button, Link } from '@mui/material';
 import { ExpandMore } from '@mui/icons-material';
 import { styled } from '@mui/material/styles'; */
-/* import { useState, useEffect,/*  useNavigate  } from 'react'; */
+import { useState, useEffect, useNavigate  } from 'react'; 
 /* import { getAllNews, deletePost } from '../services/newsServices';  */ 
 import CardHome from "../components/card/CardHome";
 
 
 
-/* const Home = () => {
-  const [news, setNews] = useState<News[]>([]);
+const Home = () => {
+  /* const [news, setNews] = useState<CardHome>([]);
 }
   /* const navigate = useNavigate();
  */
@@ -35,8 +35,8 @@ import CardHome from "../components/card/CardHome";
 
 
 
-export function Home() {
 
+ 
 
 
   return (
@@ -48,13 +48,7 @@ export function Home() {
    
 
       <div className="card-container">
-        <CardHome
-          title="title"
-          description="description"
-          content="content"
-          image="image"
-          date="date"
-          user_id="user_id" expand={false} id={""}        />
+        <CardHome/>
       </div>
 
     </div>
