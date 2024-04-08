@@ -6,18 +6,12 @@ import AppleIcon from '@mui/icons-material/Apple';
 import GoogleIcon from '@mui/icons-material/Google';
 import {registerUser} from '../../services/register-services';
 
-interface FormValues {
-  name: string;
-  email: string;
-  password: string;
-}
-
-export const RegisterForm: React.FC = () => {
-  const { register, handleSubmit } = useForm<FormValues>();
+export const RegisterForm = () => {
+  const { register, handleSubmit } = useForm();
 
   //formState: { errors } 
 
-  const onSubmit = async (data: FormValues) => {
+  const onSubmit = async (data) => {
     try {
       const registrationResult = await registerUser(data);
       if (registrationResult.success) {
@@ -28,7 +22,7 @@ export const RegisterForm: React.FC = () => {
         // Maneja errores de registro, por ejemplo, muestra un mensaje al usuario
       }
     } catch (error) {
-      console.error('Error al registrar usuario:', error);
+      console.error('Error al registrar usuario2:', error);
       // Maneja errores de conexión u otros errores del lado del cliente
     }
   };

@@ -1,24 +1,19 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom'
 import { loginUser } from "../../services/login-services"
 
-type LoginData = {
-  email: string;
-  password: string;
-};
 
-export const SignIn: React.FC = () => {
-  const { register, handleSubmit } = useForm<LoginData>();
-  const onSubmit = async (data: LoginData) => {
+export const SignIn = () => {
+  const navigate = useNavigate();
+  const { register, handleSubmit } = useForm();
+  const onSubmit = async (data) => {
     try {
-      const registrationResult = await loginUser(data);
-      if (registrationResult.success) {
+      const loginResult = await loginUser(data);
+      if (loginResult.success) {
         console.log('Usuario conectado exitosamente');
         // Redirige al usuario o realiza alguna otra acción después del registro exitoso
-      } else {
-        console.error('Error conectar usuario:', registrationResult.message);
-        // Maneja errores de registro, por ejemplo, muestra un mensaje al usuario
-      }
+      } 
     } catch (error) {
       console.error('Error al ingresar usuario:', error);
       // Maneja errores de conexión u otros errores del lado del cliente

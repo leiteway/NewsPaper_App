@@ -10,12 +10,12 @@ import NewPost from "../pages/NewPost";
 // import Card from "../components/card/Card";
 
 
+
 export const router = createBrowserRouter([
   {
       path: "/",
-      element: <LayoutPublic />,
+      element: <LayoutPublic/>,
       children: [
-    
     {
         path: "/SignIn",
         element: <SignIn/>,
