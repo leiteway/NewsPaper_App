@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-//import SignInSide from "../components/registerForm/SingIn";
-
+import Login from "../components/registerForm/Login";
 import LayoutPublic from "../components/LayoutPublic";
 import Home from "../pages/Home";
 //import SideBar from "../components/sideBar/SideBar";
@@ -16,12 +15,11 @@ import CardHome from "../components/card/CardHome";
 export const router = createBrowserRouter([
   {
       path: "/",
-      element: <LayoutPublic />,
+      element: <LayoutPublic/>,
       children: [
-    
     {
-        path: "/SignIn",
-        //element: <SignIn/>,
+        path: "/login",
+        element: <Login/>,
     },
     {
         path: "/Register",
