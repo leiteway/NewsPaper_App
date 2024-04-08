@@ -22,7 +22,7 @@
             "user_id":""
         },
         { 
-            "id": "",
+            "id": "3",
             "title":"",
             "description": "",
             "content": "",
@@ -31,7 +31,7 @@
             "user_id":""
         },
         { 
-            "id": "",
+            "id": "4",
             "title":"",
             "description":"",
             "content":"",
@@ -40,7 +40,7 @@
             "user_id":""
         },
         { 
-            "id": "",
+            "id": "5",
             "title":"",
             "description":"",
             "content":"",
@@ -49,7 +49,7 @@
             "user_id":""
         },
         { 
-            "id": "",
+            "id": "6",
             "title":"",
             "description":"",
             "content":"",
@@ -58,7 +58,7 @@
             "user_id":""
         },
         { 
-            "id": "",
+            "id": "7",
             "title":"",
             "description":"Figma se consolida como una herramienta esencial para el diseño de interfaces de usuario, se ha convertido en la herramienta de referencia para la creación de webs de todo el mundo",
             "content":"",
@@ -67,7 +67,7 @@
             "user_id":""
         },
         { 
-            "id": "",
+            "id": "8",
             "title":"JavaScript",
             "description":"JavaScript sigue siendo el rey para los developers de todo el mundo, continúa dominando el panorama del desarrollo web como el lenguaje de programación más popular",
             "content":"Su versatilidad, flexibilidad y amplia adopción lo convierten en la herramienta fundamental para crear interfaces de usuario interactivas y dinámicas. A diferencia de otros lenguajes, JavaScript se ejecuta tanto en el lado del cliente como del servidor, lo que le da una gran flexibilidad para crear aplicaciones web completas. Permite a los desarrolladores crear interfaces de usuario receptivas que se adaptan a diferentes dispositivos y tamaños de pantalla, una característica crucial en el mundo actual donde la navegación web móvil es omnipresente. La comunidad de JavaScript es vibrante y activa, con una gran cantidad de recursos disponibles en línea. Esto facilita a los desarrolladores aprender y encontrar soluciones a los desafíos que puedan enfrentar. Además, la existencia de frameworks populares como React, Angular y Vue.js simplifica la creación de aplicaciones web complejas y escalables. Si bien hay otros lenguajes que emergen en el panorama del desarrollo web, JavaScript sigue siendo la opción más popular y confiable. Su amplia adopción, flexibilidad y comunidad activa lo convierten en una herramienta indispensable para cualquier desarrollador web. Aquí hay algunos ejemplos de empresas que utilizan JavaScript: Google: Google utiliza JavaScript para crear una amplia gama de productos, como Google Search, Google Maps y Gmail. Facebook: Facebook utiliza JavaScript para crear sus productos, como Facebook, Instagram y WhatsApp. Amazon: Amazon utiliza JavaScript para crear su sitio e-commerce y otros productos como Amazon Web Services.",
