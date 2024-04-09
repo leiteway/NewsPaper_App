@@ -2,17 +2,20 @@ import jwt from "jsonwebtoken"
 import { SECRET_KEY } from "../config";
 
 
-export const createToken = async (user:any) => {
-    
+export const createToken = (user:any) => {
+    const data =  { 
+        role: user.role, 
+        id: user.id 
+    };
     const token = jwt.sign(
-        { email: user.email, role: user.role, id: user.id }, 
+        data, 
         SECRET_KEY,
         { expiresIn: '24h' })
         console.log(token)
         return token;
 }
 
-export const verifyToken = async (tokenJwt: any) =>{
+export const verifyToken = (tokenJwt: any) =>{
     try{
     return jwt.verify(tokenJwt, SECRET_KEY)
     }catch(error){

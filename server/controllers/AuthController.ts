@@ -1,7 +1,7 @@
 import UserModel from "../models/UserModel";
 import { Response , Request, NextFunction} from "express";
 import bcryptjs from "bcryptjs";
-import { createToken } from "../utils/jwt";
+import { createToken, verifyToken } from "../utils/jwt";
 
 //Register
 export const registerUser = async (req: Request, res: Response) =>{
@@ -50,24 +50,3 @@ export const loginUser = async(req:Request, res:Response) => {
         res.status(500).json({message: error.message})
     }
 }
-
-
-
-
-export const verifyUserRole = (role: string) => async(req:Request, res:Response, next:NextFunction) =>{
-    try {
-        const authHeader = req.headers['authorization'];
-        const token = authHeader && authHeader.split(' ')[1];
-        
-        const user:any = await UserModel.findOne( {where: {role: req.body.role}});
-        if (user === 'admin') {
-            res.status(200).json({ message: "Access allowed as an ADMIN" });
-            next();
-        } else {
-            res.status(403).json({ message: "You do not have permission to perfom this action" });
-        }
-    } catch (error) {
-        res.status(401).json({ message: "Token inválido" });
-    }
-}
- 
