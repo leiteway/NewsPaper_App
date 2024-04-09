@@ -1,12 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../components/registerForm/Login";
-import LayoutPublic from "../components/LayoutPublic";
-import Home from "../pages/Home";
+// import LayoutPublic from "../components/LayoutPublic";
+// import Home from "../pages/Home";
 //import SideBar from "../components/sideBar/SideBar";
 
 import RegisterForm from "../components/registerForm/RegisterForm";
 import NewPost from "../pages/NewPost";
-import CardHome from "../components/card/CardHome";
+import LayoutPrivate from "../components/LayoutPrivate";
+// import CardHome from "../components/card/CardHome";
 // import EditPost from "../components/editPost/EditPost";
 /* import CardSmall from "../components/card/CardSmall";
  */
@@ -14,20 +15,20 @@ import CardHome from "../components/card/CardHome";
 
 export const router = createBrowserRouter([
   {
-      path: "/",
-      element: <LayoutPublic/>,
-      children: [
-    {
-        path: "/login",
+        path: "/",
         element: <Login/>,
     },
     {
-        path: "/Register",
+        path: "/register",
         element: <RegisterForm/>,
     },
     {
-        path: "/",
-        element: <Home/>,
+      path: "/",
+      element: <LayoutPrivate/>,
+      children: [
+    {
+        path: "/dashboard",
+        // element: <Home/>,
     },
     {
       path: "/NewPost",
@@ -40,7 +41,7 @@ export const router = createBrowserRouter([
     {
       path: "/card/:id",
       /* element: <CardSmall/> */
-      element: <CardHome expand={true} id={"1"} title="Sample Title" description="Sample Description" content={""} image={""} date={""} user_id={""} />
+      // element: <CardHome expand={true} id={"1"} title="Sample Title" description="Sample Description" content={""} image={""} date={""} user_id={""} />
     }
   ],
   }
