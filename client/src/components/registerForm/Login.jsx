@@ -4,25 +4,22 @@ import './RegisterForm.css';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AppleIcon from '@mui/icons-material/Apple';
 import GoogleIcon from '@mui/icons-material/Google';
-import createUser from '../../services/register-services';
-// import { useNavigate } from 'react-router-dom';
+import { loginUser } from './login-services';
 
-export const LoginForm = () => {
-  const { register, handleSubmit } = useForm();
+export const Login = () => {
+  // ... código para manejar el inicio de sesión ...
 
-  //formState: { errors } 
-
-  const onSubmit = async (data) => {
+  const handleLogin = async (data) => {
     try {
-      const response = await createUser(data);
+      const response = await loginUser(data);
       if (response.success) {
-        console.log('Usuario registrado exitosamente');
-        localStorage.setItem('token', response.data.token);
-        // Redirige al usuario o realiza alguna otra acción después del registro exitoso
-      } 
+        console.log('Usuario logeado exitosamente');
+        const token = localStorage.getItem('token'); // Obtiene el token del almacenamiento local
+        console.log('Token:', token);
+        // Ahora puedes usar el token para hacer solicitudes autenticadas a tu servidor
+      }
     } catch (error) {
-      console.error('Error al registrar usuario:', error);
-      // Maneja errores de conexión u otros errores del lado del cliente
+      console.error('Error al logear usuario:', error);
     }
   };
   return (
@@ -37,7 +34,7 @@ export const LoginForm = () => {
         <div className="image-side"></div>
       </div>
 
-      <form className='form' onSubmit={handleSubmit(onSubmit)}>
+      <form className='form' onSubmit={handleLogin(onSubmit)}>
         <h5>Inicia con</h5>
         <div className="social-login">
           <a href=""><GitHubIcon className='github-icon'/></a>
