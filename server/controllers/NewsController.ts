@@ -9,8 +9,8 @@ export const getAllNews = async (req: Request, res:Response) =>{
         res.status(200).json(news);
       }
 
-    catch(error: any){
-        res.status(500).json({message: error.message})
+    catch(error){
+      return res.status(500).send({ error: 'Internal Server Error' });
     }
 }
 
