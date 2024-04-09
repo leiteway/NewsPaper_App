@@ -26,6 +26,7 @@ export const RegisterForm = () => {
     }
   };
   return (
+    <>
     <div className="container-form">
       <div className="image-container">
         <div className="logo"></div>
@@ -64,10 +65,11 @@ export const RegisterForm = () => {
         <button type="submit">Registrarse</button>
 
         <div className='login-button'>
-          ¿Tienes una cuenta? <a href="/login"> Entra aquí</a>
+          ¿Tienes una cuenta? <a href="/"> Entra aquí</a>
         </div>
       </form>
     </div>
+    </>
   );
 };
 
