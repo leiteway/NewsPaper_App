@@ -7,7 +7,6 @@ export const createUser = async (data) => {
     const response = await axios.post(`${url}`, data);
     if (response.data.token) {
       console.log('Token recibido:', response.data.token);
-      localStorage.setItem('token', response.data.token);
     }
     return response.data;
   } catch (error) {

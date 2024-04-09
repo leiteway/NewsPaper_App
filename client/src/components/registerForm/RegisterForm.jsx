@@ -15,9 +15,10 @@ export const RegisterForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const registrationResult = await createUser(data);
+      const response = await createUser(data);
       if (registrationResult.success) {
         console.log('Usuario registrado exitosamente');
+        localStorage.setItem('token', response.data.token);
         // Redirige al usuario o realiza alguna otra acción después del registro exitoso
       } 
     } catch (error) {
