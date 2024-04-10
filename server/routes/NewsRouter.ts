@@ -7,7 +7,7 @@ import { verifyUserRole } from "../middlewares/VerifyRole";
 
 const router = express.Router()//estamos invocado el enrutador
 
-router.get('/', verifyUserRole(['admin']), getAllNews);
+router.get('/', verifyUserRole(['admin', 'user']), getAllNews);
 
 router.delete('/:id', verifyToken, verifyUserRole(['admin']), deletePost);
 

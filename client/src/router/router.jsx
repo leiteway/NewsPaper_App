@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../components/registerForm/Login";
-// import LayoutPublic from "../components/LayoutPublic";
+import LayoutPublic from "../components/LayoutPublic";
 // import Home from "../pages/Home";
 //import SideBar from "../components/sideBar/SideBar";
 
 import RegisterForm from "../components/registerForm/RegisterForm";
 import NewPost from "../pages/NewPost";
-import LayoutPrivate from "../components/LayoutPrivate";
+//import LayoutPrivate from "../components/LayoutPrivate";
 // import CardHome from "../components/card/CardHome";
 // import EditPost from "../components/editPost/EditPost";
 /* import CardSmall from "../components/card/CardSmall";
@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
     },
     {
       path: "/",
-      element: <LayoutPrivate/>,
+      element: <LayoutPublic/>,
       children: [
     {
         path: "/dashboard",
