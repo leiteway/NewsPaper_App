@@ -2,12 +2,20 @@ import axios from 'axios';
 
 ///REVISAR TODAS LAS URLS
 
-const url= 'http://localhost:3000'
+const url= 'http://localhost:5000/api'
 
 //Método GET
 export const getAllNews = async () => {  
     try {
-        const response = await axios.get(`${url}/news`); 
+        const token = localStorage.getItem('verifyToken');
+        if (!token) {
+            throw new Error('Token no encontrado en el almacenamiento local');
+        }
+        const headers = {
+            'Authorization': `Bearer ${token}`
+        };
+    
+        const response = await axios.get(`${url}/news`, {headers}); 
         const data = response.data; 
         return data; 
     } catch (error) { 

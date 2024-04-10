@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import Login from "../components/registerForm/Login";
+import { LoginForm } from "../components/registerForm/Login";
 // import LayoutPublic from "../components/LayoutPublic";
 // import Home from "../pages/Home";
 //import SideBar from "../components/sideBar/SideBar";
@@ -16,7 +16,7 @@ import LayoutPrivate from "../components/LayoutPrivate";
 export const router = createBrowserRouter([
   {
         path: "/",
-        element: <Login/>,
+        element: <LoginForm/>,
     },
     {
         path: "/register",
