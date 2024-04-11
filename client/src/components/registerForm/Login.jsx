@@ -1,30 +1,30 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import './RegisterForm.css';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AppleIcon from '@mui/icons-material/Apple';
 import GoogleIcon from '@mui/icons-material/Google';
-import createUser from '../../services/register-services';
-// import { useNavigate } from 'react-router-dom';
+import { loginUser } from '../../services/login-services';
+import { useUserContext } from '../../context/UserContext';
 
-export const RegisterForm = () => {
-  const { register, handleSubmit } = useForm();
+export const LoginForm = () => {
+  const { register, handleSubmit } = useForm(); // toda la dataForm viene del useForm que dentro tiene el register que lo tenemos en el campo del formulario
+  const navigate = useNavigate();
+  const { setIsAuthenticated } = useUserContext();
 
-  //formState: { errors } 
-
-  const onSubmit = async (data) => {
+  const HandleLoginForm = async (dataForm) => {
+    /* e.preventDefault(); lógica para enviar credenciales al back-end */
     try {
-      const response = await createUser(data);
-      if (response.success) {
-        console.log('Usuario registrado exitosamente');
-        localStorage.setItem('token', response.data.token);
-        // Redirige al usuario o realiza alguna otra acción después del registro exitoso
-      } 
-    } catch (error) {
-      console.error('Error al registrar usuario:', error);
-      // Maneja errores de conexión u otros errores del lado del cliente
-    }
+      const responseLogin = await loginUser(dataForm);
+      localStorage.setItem('token',responseLogin.token);
+      setIsAuthenticated(true);
+      navigate('/home');
+    } catch (error){
+      console.error('Error:', error);
+     }
   };
+
   return (
     <>
     <div className="container-form">
@@ -37,8 +37,8 @@ export const RegisterForm = () => {
         <div className="image-side"></div>
       </div>
 
-      <form className='form' onSubmit={handleSubmit(onSubmit)}>
-        <h5>Registrate con</h5>
+      <form className='form' onSubmit={handleSubmit(HandleLoginForm)}>
+        <h5>Inicia con</h5>
         <div className="social-login">
           <a href=""><GitHubIcon className='github-icon'/></a>
           <a href=""><AppleIcon className='apple-icon'/></a>
@@ -46,11 +46,6 @@ export const RegisterForm = () => {
         </div>
 
         <h5 className='or-subtitle'></h5>
-
-        <label>
-          Nombre
-          <input {...register('name')} required type="name" />
-        </label>
 
         <label>
           Email
@@ -62,10 +57,11 @@ export const RegisterForm = () => {
           <input {...register('password')} required type="password" />
         </label>
         
-        <button type="submit">Registrarse</button>
+        <button type="submit">Log In</button>
 
         <div className='login-button'>
-          ¿Tienes una cuenta? <a href="/"> Entra aquí</a>
+          ¿No tienes una cuenta? <a href="/register"> Entra aquí</a>
+
         </div>
       </form>
     </div>
@@ -73,4 +69,4 @@ export const RegisterForm = () => {
   );
 };
 
-export default RegisterForm;
+export default LoginForm;
