@@ -29,11 +29,14 @@ The project has been built with two roles: admin and user. We have encrypted use
 * Copy code in your terminal, to enter the repository folder: `cd NEWSPAPER` 
 
 # Tests
-* Copy code: `npm run test`
+* Copy code: `npm run test` <br>
 This will run the tests.
+
 
 # Project Structure
 We have built the folder ecosystem for our project in the Front-end and Back-end in an orderly and methodical way. We have divided the project in two folders called _client_ and _server_, and we have organized the files in each one correctly for the proper behaviour and understanding of the repository. 
+On the _client_ folder: 
+
 
 # Technologies
 <img width="40" src="https://cdn.worldvectorlogo.com/logos/trello.svg">&nbsp;
