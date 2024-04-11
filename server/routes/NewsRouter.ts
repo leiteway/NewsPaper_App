@@ -3,19 +3,20 @@ import { addNewPost, deletePost, editPost, getAllNews, getOnePost } from "../con
 import { newsValidationRules } from "../validators/NewsValidator";
 import { verifyToken } from "../middlewares/HandleVerifyToken";
 import { verifyUserRole } from "../middlewares/VerifyRole";
+// import ValidateResult from "../helpers/ValidationResult";
 
 
 const router = express.Router()//estamos invocado el enrutador
 
-router.get('/', verifyUserRole(['admin', 'user']), getAllNews);
+router.get('/', verifyToken, verifyUserRole(['admin', 'user']), getAllNews);
 
 router.delete('/:id', verifyToken, verifyUserRole(['admin']), deletePost);
 
-router.post('/post', verifyToken, newsValidationRules, addNewPost);
+router.post('/', verifyToken, verifyUserRole(['admin', 'user']), newsValidationRules, addNewPost);
 
-router.put('/:id', verifyToken, newsValidationRules, editPost);
+router.put('/:id', verifyToken, verifyUserRole(['admin']), newsValidationRules, editPost);
 
-router.get('/:id', getOnePost);
+router.get('/:id', verifyToken, verifyUserRole(['admin', 'user']), getOnePost);
 
 export default router;
 
