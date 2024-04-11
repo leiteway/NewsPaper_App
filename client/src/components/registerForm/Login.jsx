@@ -6,18 +6,20 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import AppleIcon from '@mui/icons-material/Apple';
 import GoogleIcon from '@mui/icons-material/Google';
 import { loginUser } from '../../services/login-services';
-
+import { useUserContext } from '../../context/UserContext';
 
 export const LoginForm = () => {
   const { register, handleSubmit } = useForm(); // toda la dataForm viene del useForm que dentro tiene el register que lo tenemos en el campo del formulario
   const navigate = useNavigate();
+  const { setIsAuthenticated } = useUserContext();
 
   const HandleLoginForm = async (dataForm) => {
     /* e.preventDefault(); lógica para enviar credenciales al back-end */
     try {
       const responseLogin = await loginUser(dataForm);
       localStorage.setItem('token',responseLogin.token);
-      navigate('/dashboard');
+      setIsAuthenticated(true);
+      navigate('/home');
     } catch (error){
       console.error('Error:', error);
      }
@@ -59,6 +61,7 @@ export const LoginForm = () => {
 
         <div className='login-button'>
           ¿No tienes una cuenta? <a href="/register"> Entra aquí</a>
+
         </div>
       </form>
     </div>
