@@ -6,7 +6,7 @@ This project is a proposal of a sustainable development of a news management web
 + [Description](#description)
 + [Project Configuration](#project-configuration)
 + [Initialize the Postman](#initialize-the-postman)
-+ [Test](#test)
++ [Tests](#tests)
 + [Project Structure ](#project-structure)
 + [Technologies](#technologies)
 + [Authors](#authors)
@@ -16,6 +16,22 @@ This project is a proposal of a sustainable development of a news management web
 The project has been built with two roles: admin and user. We have encrypted user sessions with username and password. On the one hand the *admin* is able to create, delete, edit and view news articles, and on the other hand the *user* can browse articles and also can use the like button which increment the news they really love.
 
 # Project Configuration
+
+1. **Clone the Repository:**
+
+`bash`
+* Copy code in your terminal: `git clone https://github.com/pointfs/NEWSPAPER.git`
+
+2. **Install Dependencies:** 
+
+`bash`
+* Copy code: `npm install`
+* 
+
+# Tests
+* Copy code: `npm run test`
+This will run the tests.
+
 # Project Structure
 We have built the folder ecosystem for our project in the Front-end and Back-end in an orderly and methodical way. 
 
