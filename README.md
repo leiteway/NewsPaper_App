@@ -18,23 +18,22 @@ The project has been built with two roles: admin and user. We have encrypted use
 # Project Configuration
 
 1. **Clone the Repository:**
-
 `bash`
 * Copy code in your terminal: `git clone https://github.com/pointfs/NEWSPAPER.git`
+* Copy code to make the server run: `npm run dev`
+* This will start the server __http://localhost:5173__ using the database on MySQL Workbench.
 
 2. **Install Dependencies:** 
-
 `bash`
 * Copy code: `npm install`
-* 
+* Copy code in your terminal, to enter the repository folder: `cd NEWSPAPER` 
 
 # Tests
 * Copy code: `npm run test`
 This will run the tests.
 
 # Project Structure
-We have built the folder ecosystem for our project in the Front-end and Back-end in an orderly and methodical way. 
-
+We have built the folder ecosystem for our project in the Front-end and Back-end in an orderly and methodical way. We have divided the project in two folders called _client_ and _server_, and we have organized the files in each one correctly for the proper behaviour and understanding of the repository. 
 
 # Technologies
 <img width="40" src="https://cdn.worldvectorlogo.com/logos/trello.svg">&nbsp;
