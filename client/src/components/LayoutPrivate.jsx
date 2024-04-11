@@ -3,11 +3,11 @@ import { useUserContext } from '../context/UserContext';
 
 const LayoutPrivate = () => {
   const { isAuthenticated } = useUserContext();
-  console.log(isAuthenticated);
-return 
+return (
 <>
-{!isAuthenticated ? <Outlet/> : <Navigate to="/login"/>}
+{isAuthenticated ? <Outlet/> : <Navigate to="/"/>}
 </>
+)
 };
 
 export default LayoutPrivate;

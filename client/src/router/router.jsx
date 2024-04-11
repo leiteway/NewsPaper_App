@@ -13,15 +13,15 @@ export const router = createBrowserRouter([
       element: <LayoutPublic/>,
       children: [
         {
-          path: "/login",
+          index: true,
           element: <Login/>,
       },
       {
-          path: "/register",
+          path: "register",
           element: <RegisterForm/>,
       },
       {
-        path: "/home",
+        path: "home",
         element: <LayoutPrivate/>,
         children: [
           {
@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
               element: <Home/>,
           },
           {
-            path: "home/NewPost",
+            path: "NewPost",
             element: <NewPost/>,
           }
         ]
