@@ -21,6 +21,10 @@ export const router = createBrowserRouter([
           element: <RegisterForm/>,
       },
       {
+        path: "NewPost",
+        element: <NewPost/>,
+      },
+      {
         path: "/home",
         element: <LayoutPrivate/>,
         children: [
@@ -28,10 +32,6 @@ export const router = createBrowserRouter([
               index: true,
               element: <Home/>,
           },
-          {
-            path: "home/NewPost",
-            element: <NewPost/>,
-          }
         ]
 
   }
