@@ -42,7 +42,7 @@ export const loginUser = async(req:Request, res:Response) => {
         }
 
         const token = await createToken(user);
-     
+
         res.status(200).json({message:'Log in successfull', token})
     }
 

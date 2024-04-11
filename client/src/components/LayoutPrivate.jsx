@@ -1,17 +1,13 @@
-import { Outlet, Navigate } from "react-router-dom";
-import { useUserContext } from "../context/UserContext";
+import { Navigate, Outlet } from 'react-router-dom';
+import { useUserContext } from '../context/UserContext';
 
 const LayoutPrivate = () => {
-  const { user } = useUserContext();
-
-  return (
-  <>
-
-  {user ? <Outlet /> : <Navigate to="/" />}
-
-  </>
-  
-  );
+  const { isAuthenticated } = useUserContext();
+return (
+<>
+{isAuthenticated ? <Outlet/> : <Navigate to="/"/>}
+</>
+)
 };
 
 export default LayoutPrivate;

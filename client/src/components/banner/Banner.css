@@ -1,0 +1,20 @@
+.banner-container{
+    position: relative;
+}
+.bg-banner {
+    display: block;
+    width: 100%;
+}
+.container-text-banner{
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el contenedor con respecto a su punto de origen (esquina superior izquierda) */
+    text-align: center; 
+    align-content: center;
+    color: #fff;
+}
+.large-text-banner {
+    color:#fff;
+    font-size: 3rem;
+}

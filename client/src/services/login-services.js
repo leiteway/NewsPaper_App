@@ -4,10 +4,9 @@ const url = 'http://localhost:5000/api/auth/login';
 
 export const loginUser = async (data) =>{
     try{
-        const response = await axios.post(`${url}`, data.id);
+        const response = await axios.post(`${url}`, data);
         if (response.data.token) {
-            localStorage.setItem('verifyToken', response.data.token);
-            console.log('Log in successful!!')
+            console.log('Log in succesful!!')
         }
         return response.data;
     } catch(error) {

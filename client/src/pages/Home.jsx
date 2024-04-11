@@ -42,7 +42,7 @@ const Home = () => {
   return (
     
     <div className="home-container">
-     
+     <h1>HOLA DESDE RUTA PRIVAAAAADADAAAAAAA </h1>
       
         <SideBar/>
    

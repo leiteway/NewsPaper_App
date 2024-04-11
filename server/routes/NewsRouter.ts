@@ -5,18 +5,16 @@ import { verifyToken } from "../middlewares/HandleVerifyToken";
 import { verifyUserRole } from "../middlewares/VerifyRole";
 
 
-const router = express.Router()//estamos invocado el enrutador
+const router = express.Router()
 
-router.get('/', verifyUserRole(['admin']), getAllNews);
+router.get('/', verifyToken, verifyUserRole(['admin', 'user']), getAllNews);
 
 router.delete('/:id', verifyToken, verifyUserRole(['admin']), deletePost);
 
-router.post('/post', verifyToken, newsValidationRules, addNewPost);
+router.post('/', verifyToken, verifyUserRole(['admin', 'user']), newsValidationRules, addNewPost);
 
-router.put('/:id', verifyToken, newsValidationRules, editPost);
+router.put('/:id', verifyToken, verifyUserRole(['admin']), newsValidationRules, editPost);
 
-router.get('/:id', getOnePost);
+router.get('/:id', verifyToken, verifyUserRole(['admin', 'user']), getOnePost);
 
 export default router;
-
-//middleware para verificar el token primero,luego middleware para verificar roles si es 

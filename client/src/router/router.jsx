@@ -1,50 +1,42 @@
 import { createBrowserRouter } from "react-router-dom";
-import { LoginForm } from "../components/registerForm/Login";
-// import LayoutPublic from "../components/LayoutPublic";
-// import Home from "../pages/Home";
-//import SideBar from "../components/sideBar/SideBar";
-
+import Login from "../components/registerForm/Login";
+import LayoutPublic from "../components/LayoutPublic";
+import Home from "../pages/Home";
 import RegisterForm from "../components/registerForm/RegisterForm";
 import NewPost from "../pages/NewPost";
 import LayoutPrivate from "../components/LayoutPrivate";
-// import CardHome from "../components/card/CardHome";
-// import EditPost from "../components/editPost/EditPost";
-/* import CardSmall from "../components/card/CardSmall";
- */
 
 
 export const router = createBrowserRouter([
-  {
-        path: "/",
-        element: <LoginForm/>,
-    },
-    {
-        path: "/register",
-        element: <RegisterForm/>,
-    },
     {
       path: "/",
-      element: <LayoutPrivate/>,
+      element: <LayoutPublic/>,
       children: [
-    {
-        path: "/dashboard",
-        // element: <Home/>,
-    },
-    {
-      path: "/NewPost",
-      element: <NewPost/>,
-    },
-    {
-      path: "/EditPost/:id",
-      // element: <EditPost/>
-    },
-    {
-      path: "/card/:id",
-      /* element: <CardSmall/> */
-      // element: <CardHome expand={true} id={"1"} title="Sample Title" description="Sample Description" content={""} image={""} date={""} user_id={""} />
-    }
-  ],
+        {
+          index: true,
+          element: <Login/>,
+      },
+      {
+          path: "register",
+          element: <RegisterForm/>,
+      },
+      {
+        path: "home",
+        element: <LayoutPrivate/>,
+        children: [
+          {
+              index: true,
+              element: <Home/>,
+          },
+          {
+            path: "NewPost",
+            element: <NewPost/>,
+          }
+        ]
+
   }
-  ]);
+]
+}]
+  );
 
 export default router;
