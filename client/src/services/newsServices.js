@@ -47,7 +47,7 @@ export const deletePost = async () => {
 };
 
 //Método POST
-export const addNewPost = async () => { 
+export const addNewPost = async (newPost) => { 
     try{
         const token = localStorage.getItem('token');
         if (!token) {
@@ -55,9 +55,9 @@ export const addNewPost = async () => {
         }
         const headers = {
             'Authorization': `Bearer ${token}`
-        };  
+        }; 
 
-    const news = await axios.post(`${url}/news`, headers) 
+    const news = await axios.post(`${url}`, newPost, {headers}) 
         alert("Noticia añadida correctamente")
         return news
     }
