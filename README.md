@@ -36,6 +36,11 @@ This will run the tests.
 # Project Structure
 We have built the folder ecosystem for our project in the Front-end and Back-end in an orderly and methodical way. We have divided the project in two folders called _client_ and _server_, and we have organized the files in each one correctly for the proper behaviour and understanding of the repository. 
 On the _client_ folder: 
+* __src:__ This is where the source code of your React application resides. It typically contains the following subfolders:
+1. *components:* This folder contains reusable React components that make up our application's UI. Each component folder contains the subfolders of styles, CSS files or preprocessor files for styling your components.
+2. *pages:* This folder contains React components that represent different pages/routes of our application.
+3. *assets:* This folder holds static assets like images, fonts, or other media files used in your application.
+4. *services:* This folder may contain modules for interacting with external services or APIs, in this case an archive of Vanilla JS.
 
 
 # Technologies
