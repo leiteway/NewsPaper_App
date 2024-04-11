@@ -15,6 +15,11 @@ This project is a proposal of a sustainable development of a news management web
 # Description
 The project has been built with two roles: admin and user. We have encrypted user sessions with username and password. On the one hand the *admin* is able to create, delete, edit and view news articles, and on the other hand the *user* can browse articles and also can use the like button which increment the news they really love.
 
+# Project Configuration
+# Project Structure
+We have built the folder ecosystem for our project in the Front-end and Back-end in an orderly and methodical way. 
+
+
 # Technologies
 <img width="40" src="https://cdn.worldvectorlogo.com/logos/trello.svg">&nbsp;
 <img width="40" src="https://github.com/devicons/devicon/blob/master/icons/figma/figma-original.svg">&nbsp;
