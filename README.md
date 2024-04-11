@@ -20,8 +20,9 @@ The project has been built with two roles: admin and user. We have encrypted use
 <img width="33" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png">&nbsp;
 <img width="50" src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain.svg" >&nbsp;
 <img width="50" src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain.svg" >&nbsp;
-<img width="50" src="https://user-images.githubusercontent.com/25181517/183896128-ec99105a-ec1a-4d85-b08b-1aa1620b2046.png" >&nbsp;
 <img width="50" src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" >&nbsp;
+<img width="50" src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-plain.svg" >&nbsp;
+<img width="50" src="https://user-images.githubusercontent.com/25181517/183896128-ec99105a-ec1a-4d85-b08b-1aa1620b2046.png" >&nbsp;
 <img width="50" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">&nbsp;
 <img width="50" src="https://user-images.githubusercontent.com/25181517/192108891-d86b6220-e232-423a-bf5f-90903e6887c3.png">&nbsp;
 <img width="50" src="https://user-images.githubusercontent.com/25181517/192109061-e138ca71-337c-4019-8d42-4792fdaa7128.png">&nbsp;
