@@ -11,7 +11,7 @@ router.get('/', verifyUserRole(['admin', 'user']), getAllNews);
 
 router.delete('/:id', verifyToken, verifyUserRole(['admin']), deletePost);
 
-router.post('/post', verifyToken, newsValidationRules, addNewPost);
+router.post('/', verifyToken, verifyUserRole(['admin', 'user']), newsValidationRules, addNewPost);
 
 router.put('/:id', verifyToken, newsValidationRules, editPost);
 
