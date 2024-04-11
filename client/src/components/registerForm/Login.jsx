@@ -19,7 +19,7 @@ export const LoginForm = () => {
       const responseLogin = await loginUser(dataForm);
       localStorage.setItem('token',responseLogin.token);
       setIsAuthenticated(true);
-      navigate('/home');
+      navigate('home/NewPost');
     } catch (error){
       console.error('Error:', error);
      }
