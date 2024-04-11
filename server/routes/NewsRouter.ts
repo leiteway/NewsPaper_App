@@ -3,10 +3,9 @@ import { addNewPost, deletePost, editPost, getAllNews, getOnePost } from "../con
 import { newsValidationRules } from "../validators/NewsValidator";
 import { verifyToken } from "../middlewares/HandleVerifyToken";
 import { verifyUserRole } from "../middlewares/VerifyRole";
-// import ValidateResult from "../helpers/ValidationResult";
 
 
-const router = express.Router()//estamos invocado el enrutador
+const router = express.Router()
 
 router.get('/', verifyToken, verifyUserRole(['admin', 'user']), getAllNews);
 
@@ -19,5 +18,3 @@ router.put('/:id', verifyToken, verifyUserRole(['admin']), newsValidationRules, 
 router.get('/:id', verifyToken, verifyUserRole(['admin', 'user']), getOnePost);
 
 export default router;
-
-//middleware para verificar el token primero,luego middleware para verificar roles si es 
