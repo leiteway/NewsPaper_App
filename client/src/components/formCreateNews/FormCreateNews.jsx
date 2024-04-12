@@ -39,8 +39,7 @@ const FormCreateNews = () => {
                 <button type="submit" className='button-form-create'>ENVIAR</button>
             </div>
 
-        </form>  
-    </>
+        </form> 
   )
 };
 
