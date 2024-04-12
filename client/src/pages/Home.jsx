@@ -1,58 +1,22 @@
-/* import CardSmall from "../components/card/CardSmall"; */
-import SideBar from "../components/sideBar/SideBar";
-/* import { Typography, CardContent, CardActions, Button, Link } from '@mui/material';
-import { ExpandMore } from '@mui/icons-material';
-import { styled } from '@mui/material/styles'; */
-import { useState, useEffect, useNavigate  } from 'react'; 
-/* import { getAllNews, deletePost } from '../services/newsServices';  */ 
-import CardHome from "../components/card/CardHome";
-
+import { Link, useLoaderData } from 'react-router-dom';
+import Card from "../components/card/Card";
 
 
 const Home = () => {
-  /* const [news, setNews] = useState<CardHome>([]);
-}
-  /* const navigate = useNavigate();
- */
-/*   useEffect(() => {
-    const fetchData = async () => {
-      const data = await getAllNews();
-      setNews(data);
-    };
-    fetchData();
-   []);
- */ 
-/*   const handleDelete = async (id: string) => { 
-    try {
-      await deletePost(id); // Llamar al servicio para borrar la noticia
-      
-      // Actualizar el estado local u otras acciones necesarias
-      setNews(news.filter(newsItem => newsItem.id !== id));
-    } catch (error) {
-      console.error('Error al borrar noticia:', error);
-    }
-  }; */
-
-
-
-
- 
-
+ const news = useLoaderData();
+// console.log(news)
 
   return (
-    
-    <div className="home-container">
-     <h1>HOLA DESDE RUTA PRIVAAAAADADAAAAAAA </h1>
-      
-        <SideBar/>
-   
+    <>
+    <h1>NEWS</h1>
 
-      <div className="card-container">
-        <CardHome/>
-      </div>
-
+    <Link to="NewPost"><button className="button" style={{ backgroundColor: "#43766C", margin: '10px' }}>Agregar Noticia</button></Link>
+    <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+    {news && news.map((news) => (
+        <Card key={news.id} news={news} />
+      ))}
     </div>
-    
+  </>
   );
 }
 

@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import RegisterForm from "../components/registerForm/RegisterForm";
 import NewPost from "../pages/NewPost";
 import LayoutPrivate from "../components/LayoutPrivate";
+import { getAllNews } from "../services/newsServices";
 
 
 export const router = createBrowserRouter([
@@ -25,8 +26,9 @@ export const router = createBrowserRouter([
         element: <LayoutPrivate/>,
         children: [
           {
-              index: true,
-              element: <Home/>,
+            index: true,
+            element: <Home/>,
+            loader: getAllNews,
           },
           {
             path: "NewPost",

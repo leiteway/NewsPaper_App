@@ -2,7 +2,7 @@ import axios from 'axios';
 
 ///REVISAR TODAS LAS URLS
 
-const url= 'http://localhost:5000/api/news'
+const url= 'http://localhost:3000/news'
 
 //Método GET
 export const getAllNews = async () => { 
