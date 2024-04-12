@@ -4,10 +4,9 @@ import FormEditNews from '../components/editNews/EditNews'
 const EditPost = () => {
   return (
     <div>
-    {/* <SideBar/> */}
       <FormEditNews/>
     </div>
   )
 }
 
-export default EditPost
+export default EditPost;

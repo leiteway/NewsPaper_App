@@ -75,10 +75,10 @@ const Card = ({ news }) => {
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "5%"}}>
       
 
-          <button onClick={() => navigate(`editnews/${id}`)} className="button" style={{ backgroundColor: "#000000" }}>Modificar</button>
+          <button onClick={() => navigate(`EditPost/${id}`)} className="button" style={{ backgroundColor: "#000000" }}>Modificar</button>
         
       
-        <button className="button" style={{ backgroundColor: "#500707" }} onClick={() => deletePost(id).then(navigate("home"))}>Eliminar</button>
+        <button className="button" style={{ backgroundColor: "#500707" }} onClick={() => deletePost(id).then(navigate("/home"))}>Eliminar</button>
       
       </div>
     

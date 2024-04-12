@@ -1,17 +1,27 @@
-import { editPost } from '../../services/newsServices';
+import { editPost, getOnePost } from '../../services/newsServices';
 import './EditNews.css';
 import { useForm } from 'react-hook-form';
+import { useParams, useNavigate } from 'react-router-dom'
 
 
 const FormEditNews = () => {
-    const {register, handleSubmit } = useForm();
+    const {register, handleSubmit, setValue } = useForm();
+    const navigate = useNavigate();
+    const newsId = useParams().id; 
 
-
-
+    const getOneNews = async () => {
+      const newsData = await getOnePost(newsId);
+      console.log(newsData)
+      setValue("title", newsData.title)
+      setValue("content", newsData.content)
+      setValue("date", newsData.date)
+      setValue("image", newsData.image)
+    }
+    getOneNews();
 
   return (
    
-        <form onSubmit={handleSubmit(newsData => {editPost(newsData)})} className="form-edit-news"id="form-edit-news" action="" method="">
+        <form onSubmit={handleSubmit(data => {editPost(data)})} className="form-edit-news"id="form-edit-news" action="" method="">
 
 
             <div className="form-input-label">
