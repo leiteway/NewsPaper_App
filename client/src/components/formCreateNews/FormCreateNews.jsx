@@ -1,44 +1,49 @@
-import './FormCreateNews.css'
+import { addNewPost } from '../../services/newsServices';
+import './FormCreateNews.css';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
-export default function FormCreateNews(){
+const FormCreateNews = () => {
+    const {register, handleSubmit } = useForm();
+    const navigate = useNavigate();
+
+
   return (
-    <>
-        <form className="form-create-news" id="form-create-news" action="" method="">
+    
+        <form onSubmit={handleSubmit(newPost => {addNewPost(newPost).then(navigate('/home'))})} className="form-create-news"id="form-create-news" action="" method="">
 
-            <div className='form-input-label'>
-                <label className="form-label" htmlFor="nombre">Título de la noticia</label><br />
-                <input className="input-label" id="titulo" type="text" placeholder="Añade tu título aquí" />
+            <div className="form-input-label">
+                <label className="form-label" >Título de la noticia</label>
+                <input {...register('title')} id="nombre" type="text" className="input-label" placeholder="Añade tu título aquí" />
                 <p></p>                
             </div> 
 
-            <div className='form-input-label'>
-                <label className="form-label"  htmlFor="nombre">Contenido</label><br />
-                <input className="input-label"  id="contenido" type="text" placeholder="Añade tu contenido aquí" />
+            <div className="form-input-label">
+                <label className="form-label" >Contenido</label>
+                <input {...register('content')} id="nombre" type="text" className="input-label" placeholder="Añade tu contenido aquí" />
                 <p></p>                
             </div> 
 
-            <div className='form-input-label'>
-                <label className="form-label"  htmlFor="nombre">Fecha</label><br />
-                <input className="input-label" id="fecha" type="date" placeholder="Añade tu contenido aquí" />
+            <div className="form-input-label">
+                <label className="form-label" >Fecha</label>
+                <input {...register('date')} id="nombre" type="date" className="input-label" placeholder="Añade tu contenido aquí" />
                 <p></p>                
             </div> 
 
-            <div className='form-input-label'>
-                <label className="form-label"  htmlFor="nombre">Imagen</label><br />
-                <input className="input-label"  id="imagen" placeholder="Añade tu archivo de imagen aquí" />
+            <div className="form-input-label">
+                <label className="form-label" >Imagen</label>
+                <input {...register('image')} id="nombre" type="link" className="input-label" placeholder="Añade tu archivo de imagen aquí" />
                 <p></p>                
             </div> 
 
             <div>
-                <button className='button-form-create'>PREVISUALIZAR</button>
-                <button className='button-form-create'>CANCELAR</button>
+                <button onClick={() => navigate('/home')} className='button-form-create'>CANCELAR</button>
+                <button type="submit" className='button-form-create'>ENVIAR</button>
             </div>
 
-            <button className='button-form-delete'>ENVIAR</button>
-
-            
-        </form>  
-    </>
+        </form> 
   )
-}
+};
+
+export default FormCreateNews;
 

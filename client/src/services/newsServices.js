@@ -15,8 +15,9 @@ export const getAllNews = async () => {
             'Authorization': `Bearer ${token}`
         };
         
-        const response = await axios.get(`${url}`, headers); 
-        const data = response.data; 
+        const response = await axios.get(`${url}`, {headers}); 
+        const data = response.data;
+        console.log(data)
         return data; 
     }
 
@@ -37,7 +38,7 @@ export const deletePost = async () => {
         };  
 
     if(confirm('¿Estás seguro de que quieres eliminar esta noticia?')=== true){
-        const news =await axios.delete(`${url}/${id}`, headers)
+        const news =await axios.delete(`${url}/${id}`, {headers})
         return news
     }
     }
@@ -47,7 +48,7 @@ export const deletePost = async () => {
 };
 
 //Método POST
-export const addNewPost = async () => { 
+export const addNewPost = async (newPost) => { 
     try{
         const token = localStorage.getItem('token');
         if (!token) {
@@ -55,14 +56,14 @@ export const addNewPost = async () => {
         }
         const headers = {
             'Authorization': `Bearer ${token}`
-        };  
+        }; 
 
-    const news = await axios.post(`${url}/news`, headers) 
+    const news = await axios.post(`${url}`, newPost, {headers}) 
         alert("Noticia añadida correctamente")
         return news
     }
     catch(error){
-    console.error('Error at posting you news', error);
+    console.error('Error at posting your news', error);
     }
 };
 
@@ -77,7 +78,7 @@ export const getOnePost = async () => {
             'Authorization': `Bearer ${token}`
         };  
 
-    const response = await fetch(`${url}/${id}`, headers); 
+    const response = await fetch(`${url}/${id}`, {headers}); 
     const data = await response.json(); 
     return data;
     }
@@ -98,7 +99,7 @@ export const editPost = async (id, data) => {
             'Authorization': `Bearer ${token}`
         };  
 
-    const response = await axios.put(`${url}/${id}`, data, headers);
+    const response = await axios.put(`${url}/${id}`, data, {headers});
     return response.data;
     }catch(error){
         console.error('Error editing your news', error);
