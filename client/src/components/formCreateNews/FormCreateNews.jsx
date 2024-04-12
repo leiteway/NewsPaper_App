@@ -37,7 +37,7 @@ const FormCreateNews = () => {
             </div> 
 
             <div>
-                <button onClick={() => navigate('')} className='button-form-create'>CANCELAR</button>
+                <button onClick={() => navigate('/home')} className='button-form-create'>CANCELAR</button>
                 <button type="submit" className='button-form-create'>ENVIAR</button>
             </div>
 
