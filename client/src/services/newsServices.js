@@ -63,7 +63,7 @@ export const addNewPost = async (newPost) => {
         return news
     }
     catch(error){
-    console.error('Error at posting you news', error);
+    console.error('Error at posting your news', error);
     }
 };
 
