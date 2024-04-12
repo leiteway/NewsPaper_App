@@ -5,10 +5,11 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import AppleIcon from '@mui/icons-material/Apple';
 import GoogleIcon from '@mui/icons-material/Google';
 import createUser from '../../services/register-services';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const RegisterForm = () => {
   const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
 
   //formState: { errors } 
 
@@ -18,7 +19,7 @@ export const RegisterForm = () => {
       if (response.success) {
         console.log('Usuario registrado exitosamente');
         localStorage.setItem('token', response.data.token);
-        // Redirige al usuario o realiza alguna otra acción después del registro exitoso
+        navigate('/')// Redirige al usuario 
       } 
     } catch (error) {
       console.error('Error al registrar usuario:', error);

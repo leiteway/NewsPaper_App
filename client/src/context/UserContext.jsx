@@ -4,6 +4,7 @@ export const UserContext = createContext();
 
 const UserProvider = ({children}) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false) 
+  
 
   return (
     <UserContext.Provider value={{setIsAuthenticated, isAuthenticated}}>
