@@ -79,6 +79,8 @@ const Card = ({ news }) => {
         
       
         <button className="button" style={{ backgroundColor: "#500707" }} onClick={() => deletePost(id).then(navigate("/home"))}>Eliminar</button>
+
+        <button className="button" style={{ backgroundColor: "#500707" }} onClick={() => navigate(`Article/${id}`)}>Ver noticia</button>
       
       </div>
     
