@@ -8,7 +8,7 @@ export default function NavBar() {
   const { isAuthenticated } = useUserContext()
   return (
     <div className="navbar">
-        <img className="logotipo" src='../src/assets/public/logotipo.png' alt="" />
+        <img className="logotipo" src='src/assets/images/Logo/logo tech-3-AdminScreen.svg' alt="" />
         <Box>
             <SearchIcon className='searchIcon'/>
             <input className="searchBar" placeholder="Escribe tu búsqueda aquí..." />

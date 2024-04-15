@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import RegisterForm from "../components/registerForm/RegisterForm";
 import NewPost from "../pages/NewPost";
 import LayoutPrivate from "../components/LayoutPrivate";
-import { getAllNews, getOnePost } from "../services/newsServices";
+import { getAllNews } from "../services/newsServices";
 import EditPost from "../pages/EditPost";
 import Article from "../pages/Article";
 
@@ -43,7 +43,6 @@ export const router = createBrowserRouter([
           {
             path: "Article/:id",
             element: <Article/>,
-            loader: getOnePost,
           }
         ]
 
