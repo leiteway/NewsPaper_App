@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { deletePost } from "../../services/newsServices";
+import Swal from 'sweetalert2';
 
 const StyledCard = styled.div`
 
@@ -78,7 +79,31 @@ const Card = ({ news }) => {
           <button onClick={() => navigate(`EditPost/${id}`)} className="button" style={{ backgroundColor: "#000000" }}>Modificar</button>
         
       
-        <button className="button" style={{ backgroundColor: "#500707" }} onClick={() => deletePost(id).then(navigate("/home"))}>Eliminar</button>
+        <button className="button" style={{ backgroundColor: "#500707" }} onClick={() => {
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: "No podrás revertir esta acción",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, eliminar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        deletePost(id).then(() => {
+          Swal.fire(
+            'La noticia ha sido eliminada con éxito.',
+          );
+          navigate('/home');
+        }).catch((error) => {
+          Swal.fire(
+            'Hubo un problema al eliminar la noticia.',
+          );
+        });
+      }
+    });
+ }}>Eliminar</button>
       
       </div>
     

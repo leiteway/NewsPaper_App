@@ -1,7 +1,8 @@
 import { editPost, getOnePost } from '../../services/newsServices';
 import './EditNews.css';
 import { useForm } from 'react-hook-form';
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 const FormEditNews = () => {
@@ -22,7 +23,10 @@ const FormEditNews = () => {
 
   return (
    
-        <form onSubmit={handleSubmit(data => {editPost(newsId, data)})} className="form-edit-news"id="form-edit-news" action="" method="">
+        <form onSubmit={handleSubmit(data => {editPost(newsId, data).then(() => {
+            Swal.fire('Noticia creada correctamente');
+            navigate('/home'); // Asegúrate de que navigate esté definido y disponible en este contexto
+        })})} className="form-edit-news"id="form-edit-news" >
 
 
             <div className="form-input-label">
@@ -54,7 +58,7 @@ const FormEditNews = () => {
 
 
             <div>
-                <button onClick={() => navigate()} className='button-form-create'>CANCELAR</button>
+                <button onClick={() => navigate('/home')} className='button-form-create'>CANCELAR</button>
                 <button type="submit" className='button-form-create'>ENVIAR</button>
             </div>
 
