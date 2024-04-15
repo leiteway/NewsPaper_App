@@ -6,8 +6,10 @@ const Article = () => {
 
   return (
     <>
+    <div className="container-article">
     <SideBar />
     <CardArticle />
+    </div>
     </>
   );
 }

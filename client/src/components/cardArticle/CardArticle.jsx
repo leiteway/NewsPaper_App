@@ -25,16 +25,12 @@ const CardArticle = () => {
     <>
     {post && (
     <div className="card-detail">
-        <div className="imgcard">
-            <img className="card-detail__image" src={post.image}/>
-        </div>
-        <div className="details">
-            <h2 className="card-detail__title">{post.title}</h2>
-        <div className='descriptions'>
-            <p className="card-detail__content"> {post.content}</p>
-            <p className="card-detail__year"> {post.date}</p>
-        </div>
-        </div>
+        <img className="card-detail-image" src={post.image}/>
+        <p className="card-detail-date"> {post.date}</p>
+        <h2 className="card-detail-title">{post.title}</h2>
+        <p className="card-detail-content"> {post.content}</p>
+        
+        
     </div>
   )
 }

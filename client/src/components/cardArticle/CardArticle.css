@@ -1,6 +1,23 @@
+.container-article {
+    display: flex;
+}
+
 .card-detail {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-left: 6rem;
+    background: linear-gradient(90deg, #0E212C, #1A3645);
+    border-radius: 40px;
+}
+
+.card-detail-image {
+    width: 50rem;
+    border-radius: 60px;
+    padding: 2rem;
+}
+
+.card-detail-title, .card-detail-content, .card-detail-date {
+    color: #fff;
+    width: 50rem;
+    padding: 2rem 1.5rem 1rem 2rem;
 }
