@@ -11,7 +11,7 @@ const LogOutButton = () => {
     navigate('/');
   }
   return (
-    <button onClick={() => logOut()}>LogOut</button>
+    <button style={{width: "6rem", backgroundColor:"#478FB4", color: "#000000", padding:"6px", borderRadius:"10px", fontFamily: 'system-ui', fontSize: "1rem", border: "none", marginRight:"2rem" }} onClick={() => logOut()}>LogOut</button>
   )
 }
 

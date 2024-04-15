@@ -9,8 +9,8 @@ const FormCreateNews = () => {
 
 
   return (
-    
-        <form onSubmit={handleSubmit(newPost => {addNewPost(newPost).then(navigate('/home'))})} className="form-create-news"id="form-create-news" action="" method="">
+        <div className="container-form-create-news">
+        <form onSubmit={handleSubmit(newPost => {addNewPost(newPost).then(navigate('/home'))})} className="form-create-news" id="form-create-news" action="" method="">
 
             <div className="form-input-label">
                 <label className="form-label" >Título de la noticia</label>
@@ -42,6 +42,7 @@ const FormCreateNews = () => {
             </div>
 
         </form> 
+        </div>
   )
 };
 
