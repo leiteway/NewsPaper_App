@@ -37,7 +37,7 @@ const NewsFrame = styled.img`
   aspect-ratio: 5/7.2;
   object-fit: cover;
 `
-const NewsDetails = styled.div`
+const MoreDetails = styled.div`
   @media screen and (max-width: 768px) {
     display: none;
   }
