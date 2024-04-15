@@ -1,30 +1,27 @@
 export const newsTest = {
     title: "Test",
-    imageUrl: "www.testimage.com",
     content: "Test",
     date: "2024-04-12",
-    user: "userId" 
+    image: "www.testimage.com",
 };
 
 export const updateNewsTest = {
     title: "Test",
-    imageUrl: "www.testimage.com",
     content: "Test",
     date: "2024-04-12",
-    user: "userId" 
+    image: "www.testimage.com"
 }; 
 
 export const editedData = {
-    title: "edited test",
-    imageUrl: "Edited Test",
+    title: "Test",
     content: "Edited Test",
     date: "2024-04-12",
-    user: "userId" 
+    image: "Edited Test"
 };
 
 export const adminTest = {
     name: "Test",
     email: "admintest@gmail.com",
     password: "1234",
-    rol: "admin"
+    role: "admin"
 }

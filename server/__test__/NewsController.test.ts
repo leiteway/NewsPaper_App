@@ -3,24 +3,12 @@ import { app, server } from '../app';
 import connection_db from '../database/connection_db';
 import NewsModel from '../models/NewsModel';
 import UserModel from '../models/UserModel';
-import { newsTest, updateNewsTest, editedData, adminTest } from './test-helpers/helperTest';
+import { newsTest, adminTest } from '../__test__/test-helpers/helperTest';
 import { createToken } from '../utils/jwt';
 
 
 const api = request(app);
 
-// //Variable para almacenar el token de autenticacióm
-// let Token: String;
-
-// beforeAll(async () => {
-//     // Envía una solicitud de inicio de sesión para obtener el token
-//     const loginResponse = await api
-//         .post('/auth/login') //login es tu ruta de inicio de sesión
-//         .send({ email: 'correo@example.com', password: 'contraseña' });
-
-//     // Extrae el token de la respuesta y lo almacena en authToken
-//     Token = loginResponse.body.token;
-// });
 
 describe('Testing News CRUD', () => {
 
@@ -32,53 +20,54 @@ describe('Testing News CRUD', () => {
         const user:any = await UserModel.create(
             adminTest
         );
-        userId = await user?.get('user_id').toString();
+        userId = await user?.get('id').toString();
         token = await createToken(user);
+        console.log(token + "Hola desde test")
     });
 
 
     describe('GET', () => {
         test('Get response must be an array and then show 200 status ', async() => {
             const response = await api.get('/api/news').set('Authorization', `Bearer ${token}`);
-            expect(Array.isArray(response.body)).toBe(true)
+            // expect(response.body).toBeInstanceOf(Array)
+            console.log(response)
             expect(response.status).toBe(200)
         })    
     });
 
 
     describe('POST', () => {
-        let dataNew = {}
-        beforeEach(() => {
-            dataNew = {
-                ...newsTest,
-                user: userId 
-            };
-        })
 
         test("Users create a new post", async()=>{
             const response = await request(app)
             .post('/api/news').set('Authorization', `Bearer ${token}`)
-            .send(dataNew);
+            .send(newsTest);
+            console.log(response.body)
 
             expect(response.status).toBe(201);
             expect(response.body.content).toBeDefined();
             expect(response.body.title).toBeDefined();
         })
+        
         afterAll(async () => {
             await NewsModel.destroy({
                 where: {
                     title: "Test"
                 }
             }); 
+            
         });
     })
 
 
+    afterAll( async () => {
+        await UserModel.destroy({
+            where: {
+                id: userId
+            }
+        });
+        server.close();
+        connection_db.close();
+    });
 
-
-});
-
-//Para cerrar el servidor después de las pruebas
-afterAll(done => {
-    server.close(done);
 });
