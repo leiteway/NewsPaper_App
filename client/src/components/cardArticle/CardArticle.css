@@ -18,6 +18,26 @@
 
 .card-detail-title, .card-detail-content, .card-detail-date {
     color: #fff;
+}
+
+.card-detail-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card-detail-date {
+    padding: 1rem;
+}
+
+.heart-date {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    height: 3rem;
+    margin-right: 1rem
+}
+
+.text-card-detail {
+    padding: 2rem 1rem 1.5rem 2rem;
     width: 50rem;
-    padding: 2rem 1.5rem 1rem 2rem;
 }
