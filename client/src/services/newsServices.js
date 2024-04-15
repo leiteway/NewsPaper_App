@@ -99,7 +99,7 @@ export const editPost = async (id, data) => {
             'Authorization': `Bearer ${token}`
         };
 
-    const response = await axios.put(`${url}/${id}`, data, {headers});
+    const response = await axios.put(`${url}/${id}`, data, { headers });
     return response.data;
     }catch(error){
         console.error('Error editing your news', error);

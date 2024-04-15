@@ -25,29 +25,29 @@ const FormEditNews = () => {
 
 
             <div className="form-input-label">
-                <label className="form-label" >Título de la noticia</label>
-                <input {...register('title')} id="nombre" type="text" className="input-label" placeholder="Añade tu título aquí" />
+                <label for="title" className="form-label" >Título de la noticia</label>
+                <input {...register('title')} id="title" type="text" className="input-label" placeholder="Añade tu título aquí" />
                 <p></p>                
             </div>
 
 
             <div className="form-input-label">
-                <label className="form-label" >Contenido</label>
-                <input {...register('content')} id="nombre" type="text" className="input-label" placeholder="Añade tu contenido aquí" />
+                <label for="content" className="form-label" >Contenido</label>
+                <input {...register('content')} id="content" type="text" className="input-label" placeholder="Añade tu contenido aquí" />
                 <p></p>                
             </div>
 
 
             <div className="form-input-label">
-                <label className="form-label" >Fecha</label>
-                <input {...register('date')} id="nombre" type="date" className="input-label" placeholder="Añade tu contenido aquí" />
+                <label for="date" className="form-label" >Fecha</label>
+                <input {...register('date')} id="date" type="date" className="input-label" placeholder="Añade tu contenido aquí" />
                 <p></p>                
             </div>
 
 
             <div className="form-input-label">
-                <label className="form-label" >Imagen</label>
-                <input {...register('image')} id="nombre" type="link" className="input-label" placeholder="Añade tu archivo de imagen aquí" />
+                <label for="image" className="form-label" >Imagen</label>
+                <input {...register('image')} id="image" type="link" className="input-label" placeholder="Añade tu archivo de imagen aquí" />
                 <p></p>                
             </div>
 
