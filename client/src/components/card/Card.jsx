@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { deletePost } from "../../services/newsServices";
 
-const StyledCard = styled.div`
+const NewsCard = styled.div`
 
   display: flex;
   align-items: center;
@@ -28,16 +28,16 @@ const StyledCard = styled.div`
     width: 250px;
   }
 `
-const SculptureImage = styled.div`
+const NewsImage = styled.div`
   width: 100%;
   display: flex;
 `
-const Frame = styled.img`
+const NewsFrame = styled.img`
   width: 100%;
   aspect-ratio: 5/7.2;
   object-fit: cover;
 `
-const MoreDetails = styled.div`
+const NewsDetails = styled.div`
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -54,10 +54,10 @@ const Card = ({ news }) => {
 
   return (
     
-    <StyledCard key={id}>
-    <SculptureImage style={{background: `url(${image}) center/cover no-repeat`}}>
-      <Frame src='src/assets/frame.png' alt={title} />
-    </SculptureImage>
+    <NewsCard key={id}>
+    <NewsImage style={{background: `url(${image}) center/cover no-repeat`}}>
+      <NewsFrame src='src/assets/frame.png' alt={title} />
+    </NewsImage>
 
     <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%", height: "86%", margin: '0 3% 0'}}>
       <section>
@@ -84,7 +84,7 @@ const Card = ({ news }) => {
     
     </div>
 
-  </StyledCard>
+  </NewsCard>
 
   )
 }
