@@ -19,7 +19,7 @@ export default function NavBar() {
             <img src='../src/assets/public/avatar-admin-screen.png' alt="" />
             <p>Fátima</p>
             </div>
-            <LogOutButton/>
+            <LogOutButton />
             </>
         )}
     </div>
