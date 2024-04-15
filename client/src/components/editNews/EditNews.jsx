@@ -21,7 +21,7 @@ const FormEditNews = () => {
 
   return (
    
-        <form onSubmit={handleSubmit(data => {editPost(data)})} className="form-edit-news"id="form-edit-news" action="" method="">
+        <form onSubmit={handleSubmit(data => {editPost(newsId, data)})} className="form-edit-news"id="form-edit-news" action="" method="">
 
 
             <div className="form-input-label">
