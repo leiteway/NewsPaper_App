@@ -14,8 +14,8 @@ export const updateNewsTest = {
     user: "userId" 
 }; 
 
-export const editedTest = {
-    title: "Edited Test",
+export const editedData = {
+    title: "edited test",
     imageUrl: "Edited Test",
     content: "Edited Test",
     date: "2024-04-12",
@@ -23,7 +23,7 @@ export const editedTest = {
 };
 
 export const adminTest = {
-    name: "Admin Test",
+    name: "Test",
     email: "admintest@gmail.com",
     password: "1234",
     rol: "admin"
