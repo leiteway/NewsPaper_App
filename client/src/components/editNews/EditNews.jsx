@@ -11,10 +11,11 @@ const FormEditNews = () => {
 
     const getOneNews = async () => {
       const newsData = await getOnePost(newsId);
-      console.log(newsData)
+      const dateSlice = newsData.date.slice(0, 10);
+
       setValue("title", newsData.title)
       setValue("content", newsData.content)
-      setValue("date", newsData.date)
+      setValue("date", dateSlice)
       setValue("image", newsData.image)
     }
     getOneNews();
