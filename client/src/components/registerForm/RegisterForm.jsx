@@ -35,7 +35,7 @@ export const RegisterForm = () => {
           <p>Las noticias más interesantes del mundo Tech</p>
           <h1>TECHTODAY</h1>
         </div>
-        {/* <div className="image-side"></div> */}
+        <div className="image-side"></div>
       </div>
 
       <form className='form' onSubmit={handleSubmit(onSubmit)}>
