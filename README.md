@@ -26,12 +26,12 @@ The project has been built with two roles: admin and user. We have encrypted use
 * Copy code to make the server run: ```npm run dev```
 * This will start the server __http://localhost:5173__ using the database on MySQL Workbench.
 
-3. **Create the file __.env__**
+2. **Create the file __.env__**
 
 * Create the file __.env__ located in the folder _server_.
 * Copy the information placed on ´.env_example´ and fill it with your personal data.
 
-4. **Install Dependencies:** 
+3. **Install Dependencies:** 
 `bash`
 * Copy code: `npm install`
 * Copy code in your terminal, to enter the repository folder: `cd NEWSPAPER`
@@ -40,7 +40,6 @@ The project has been built with two roles: admin and user. We have encrypted use
 # Initialize the Postman
 Methods in Postman to view, add, edit, and delete movie posters in our database.
 https://albamartinmz.postman.co/workspace/My-Workspace~1d37aef0-5e05-4f4d-8aa0-e702b0ca00bc/collection/32563763-1112c32c-0d93-4046-a71e-6813616cd5b7?action=share&creator=32563763
-
 
 
 # Tests
