@@ -23,7 +23,7 @@ const NewsCard = styled.div`
   max-width: 550px;
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
-  background-color:linear-gradient(rgba(7, 26, 33, 0.5),rgba(9, 36, 46, 0.5), rgba(7, 26, 33, 0.5));
+  background:linear-gradient(#041116, #071A21, #09242E, #1A3645);
   color: white;
 
 
