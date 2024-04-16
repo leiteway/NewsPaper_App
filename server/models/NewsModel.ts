@@ -37,7 +37,7 @@ const NewsModel = connection_db.define('News', {
 },
 {
     tableName: 'news', // Nombre de la tabla en la base de datos
-    timestamps: true // Habilitando los campos los campos createdAt y updatedAt
+    timestamps: false // Habilitando los campos los campos createdAt y updatedAt
   }
 );
 
