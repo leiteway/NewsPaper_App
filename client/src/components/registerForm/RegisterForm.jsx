@@ -19,6 +19,7 @@ export const RegisterForm = () => {
       console.log(data)
         const response = await createUser(data);
         localStorage.setItem('token', response.token);
+        setUser(response.newUser.role)
         setIsAuthenticated(true)
         navigate('/home')// Redirige al usuario 
     } catch (error) {

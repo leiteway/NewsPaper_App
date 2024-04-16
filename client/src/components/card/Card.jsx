@@ -1,4 +1,5 @@
 import React from "react";
+import { useUserContext } from "../../context/UserContext";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { deletePost } from "../../services/newsServices";
@@ -6,6 +7,7 @@ import Swal from 'sweetalert2';
 import DeleteOutlined from '@mui/icons-material/DeleteOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+
 
 
 const NewsCard = styled.div`
@@ -99,8 +101,11 @@ const Card = ({ news }) => {
     const navigate = useNavigate();
     const shortContent = content.length > 150 ? content.slice(0, 150) + '...' : content;
 
-  return (
+    const { user } = useUserContext();
+    console.log(user)
     
+  return (
+    <>
     <NewsCard>
      <section className="news-image">
         <img src={image} alt="news" />
@@ -114,6 +119,8 @@ const Card = ({ news }) => {
     <div className="news-buttons">
       <button className="news-button-readmore" onClick={() => navigate(`Article/${id}`)}>Leer más</button>
       <FavoriteBorderIcon/>
+      { user === 'admin' && (
+        <>
       <EditOutlinedIcon className="news-button-edit" onClick={() => navigate(`EditPost/${id}`)} />
       <DeleteOutlined className="news-button-delete" onClick={() => {
     Swal.fire({
@@ -140,12 +147,14 @@ const Card = ({ news }) => {
       }
     });
  }}/>
+ </>
+ )}
       
     </div>
 
   
   </NewsCard>
-
+</>
   )
 }
 
