@@ -30,7 +30,7 @@ const FormCreateNews = () => {
 
             <div className="form-input-label">
                 <label className="form-label" >Contenido</label>
-                <input {...register('content')} id="nombre" type="text" className="input-label" placeholder="Añade tu contenido aquí" />
+                <input {...register('content')} id="nombre" type="text" className="input-label form-content-label" placeholder="Añade tu contenido aquí" style={{height:"10rem"}} />
                 <p></p>                
             </div> 
 
