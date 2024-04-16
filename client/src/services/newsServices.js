@@ -27,7 +27,7 @@ export const getAllNews = async () => {
 };
 
 //Método DELETE
-export const deletePost = async () => {
+export const deletePost = async (id) => {
     try{
         const token = localStorage.getItem('token');
         if (!token) {
@@ -37,10 +37,9 @@ export const deletePost = async () => {
             'Authorization': `Bearer ${token}`
         };  
 
-    if(confirm('¿Estás seguro de que quieres eliminar esta noticia?')=== true){
         const news =await axios.delete(`${url}/${id}`, {headers})
         return news
-    }
+
     }
     catch(error){
         console.error('Error delete news:', error);
@@ -59,8 +58,7 @@ export const addNewPost = async (newPost) => {
         }; 
 
     const news = await axios.post(`${url}`, newPost, {headers}) 
-        alert("Noticia añadida correctamente")
-        return news
+
     }
     catch(error){
     console.error('Error at posting your news', error);
@@ -99,7 +97,7 @@ export const editPost = async (id, data) => {
             'Authorization': `Bearer ${token}`
         };
 
-    const response = await axios.put(`${url}/${id}`, data, {headers});
+    const response = await axios.put(`${url}/${id}`, data, { headers });
     return response.data;
     }catch(error){
         console.error('Error editing your news', error);
