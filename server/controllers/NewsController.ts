@@ -1,3 +1,4 @@
+import { verifyToken } from "../utils/jwt";
 import NewsModel from "../models/NewsModel";
 import { Response,Request } from 'express';
 
@@ -10,7 +11,7 @@ export const getAllNews = async (req: Request, res:Response) =>{
       }
 
     catch(error){
-      return res.status(500).send({ error: 'Internal Server Error' });
+      return res.status(500).send({ error: 'Internal Server Error' + error });
     }
 }
 
@@ -33,7 +34,12 @@ export const getOnePost = async (req: Request, res: Response) => {
 export const addNewPost = async (req: Request, res: Response) =>{
 
     try{
-      const publishNews = await NewsModel.create(req.body);
+      const authHeader = req.headers['authorization'];
+      const token = authHeader && authHeader.split(' ')[1];
+      const tokenData: any = verifyToken(token)
+      const userId = tokenData.id
+      const newPost = {...req.body, user_id: userId}
+      const publishNews = await NewsModel.create(newPost);
       res.status(201).json(publishNews)
     }
   
@@ -62,15 +68,15 @@ export const editPost = async (req: Request, res: Response) =>{
 //DELETE
 export const deletePost = async (req: Request, res: Response) => {
   const newsId  = req.params.id; 
- 
+
   try {
-     const deletedPost = await NewsModel.destroy({ where: { id: newsId } });
+    const deletedPost = await NewsModel.destroy({ where: { id: newsId } });
       
         res.status(201).json({ message: `Post with ID ${newsId} deleted successfully`, news: deletedPost });
 
-      } 
+  } 
   
   catch (error) {
-     res.status(500).json({ message: 'Error trying to delete the post', error });
+    res.status(500).json({ message: 'Error trying to delete the post', error });
   }
- };
+};

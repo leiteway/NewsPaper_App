@@ -27,13 +27,6 @@
     text-indent: 60px;
 }
 
-.searchIcon {
-    color:#fff;
-    position: absolute;
-    top: 8%;
-    left: 38.5%;
-}
-
 .searchBar::placeholder {
     color: #999;
     text-indent: 60px;
@@ -41,7 +34,7 @@
 .userContainer{
     color: #fff;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-right: 2rem;
+    margin-right: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -10,7 +10,7 @@ export const createToken = (user:any) => {
     const token = jwt.sign(
         data, 
         SECRET_KEY,
-        { expiresIn: '24h' })
+        { expiresIn: '2h' })
         console.log(token)
         return token;
 }

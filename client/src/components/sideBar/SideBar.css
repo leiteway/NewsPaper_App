@@ -1,6 +1,6 @@
 .sidebar-container {
     width: 20rem;
-    height: 100rem;
+    height: 70rem;
     background: linear-gradient(90deg, #0E212C, #1A3645);
     border-radius: 40px;
     display: flex;
@@ -47,7 +47,7 @@ hr {
     flex-direction: column;
     position: relative;
     align-items: center;
-    margin-top: 90vh;
+    margin-top: 15vh;
 }
 
 .text-contact-sidebar {
