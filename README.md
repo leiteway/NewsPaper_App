@@ -26,12 +26,12 @@ The project has been built with two roles: admin and user. We have encrypted use
 * Copy code to make the server run: ```npm run dev```
 * This will start the server __http://localhost:5173__ using the database on MySQL Workbench.
 
-2. **Create the file __.env__**
-   
-* Create the file __.env__ located in the folder "Hollywow-API"
-* Copy the information placed on ´.env_example´ and fill it with your personal data
+3. **Create the file __.env__**
 
-2. **Install Dependencies:** 
+* Create the file __.env__ located in the folder _server_.
+* Copy the information placed on ´.env_example´ and fill it with your personal data.
+
+4. **Install Dependencies:** 
 `bash`
 * Copy code: `npm install`
 * Copy code in your terminal, to enter the repository folder: `cd NEWSPAPER`
@@ -63,11 +63,12 @@ On the _server_ folder:
 * __controllers:__ to handle HTTP requests.
 * __database:__ configuration of connections with the database.
 * __helpers:__ contains the import and export validations from express-validator.
-* __models__: the model of database.
-* __node_modules:__ contains all the dependencies of your project. When you install packages using npm, they are stored here.
-* __routes:__ route definitions for the methods of the API.
-* __test:__ unit and integration tests in one file.
-* __validators:__ contains the validations of the methods of the CRUD.
+* __interfaces__: define data structures for consistent communication.
+* __middlewares:__ handle request processing and control flow.
+* __models:__ contains the models of the News and User.
+* __utils:__ provide reusable functionalities.
+* __validators:__ contains the validations of the News and User.
+* __routes:__ organize API endpoint definitions.
 
 
 # Technologies
