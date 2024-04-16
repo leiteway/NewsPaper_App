@@ -38,7 +38,7 @@ The project has been built with two roles: admin and user. We have encrypted use
 
 
 # Initialize the Postman
-Methods in Postman to view, add, edit, and delete movie posters in our database. Click on this link to obtain our Postman information about the CRUD in our database. You can to view, add, edit, and delete the articles on it.<br>
+Click on this link to obtain our Postman information about the methods of the CRUD in our database. You can view, add, edit, and delete the articles of our website on it.<br>
 https://albamartinmz.postman.co/workspace/My-Workspace~1d37aef0-5e05-4f4d-8aa0-e702b0ca00bc/collection/32563763-1112c32c-0d93-4046-a71e-6813616cd5b7?action=share&creator=32563763
 
 
