@@ -6,25 +6,26 @@ import AppleIcon from '@mui/icons-material/Apple';
 import GoogleIcon from '@mui/icons-material/Google';
 import createUser from '../../services/register-services';
 import { useNavigate } from 'react-router-dom';
+import { useUserContext } from '../../context/UserContext';
+import Swal from 'sweetalert2';
 
 export const RegisterForm = () => {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
-
-  //formState: { errors } 
+  const { setIsAuthenticated, setUser } = useUserContext();
 
   const onSubmit = async (data) => {
     try {
       const response = await createUser(data);
       if (response.success) {
-        console.log('Usuario registrado exitosamente');
         localStorage.setItem('token', response.data.token);
         navigate('/')// Redirige al usuario 
       } 
     } catch (error) {
       console.error('Error al registrar usuario:', error);
-      // Maneja errores de conexión u otros errores del lado del cliente
     }
+
+    console.log(onSubmit)
   };
   return (
     <>

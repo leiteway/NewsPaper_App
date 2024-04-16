@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { deletePost } from "../../services/newsServices";
+import Swal from 'sweetalert2';
 import DeleteOutlined from '@mui/icons-material/DeleteOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
@@ -114,7 +115,31 @@ const Card = ({ news }) => {
       <button className="news-button-readmore" onClick={() => navigate(`Article/${id}`)}>Leer más</button>
       <FavoriteBorderIcon/>
       <EditOutlinedIcon className="news-button-edit" onClick={() => navigate(`EditPost/${id}`)} />
-      <DeleteOutlined className="news-button-delete" onClick={() => deletePost(id).then(navigate("/home"))}/>
+      <DeleteOutlined className="news-button-delete" onClick={() => {
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: "No podrás revertir esta acción",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, eliminar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        deletePost(id).then(() => {
+          Swal.fire(
+            'La noticia ha sido eliminada con éxito.',
+          );
+          navigate('/home');
+        }).catch((error) => {
+          Swal.fire(
+            'Hubo un problema al eliminar la noticia.',
+          );
+        });
+      }
+    });
+ }}/>
       
     </div>
 
