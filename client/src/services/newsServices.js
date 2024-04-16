@@ -58,7 +58,7 @@ export const addNewPost = async (newPost) => {
         }; 
 
     const news = await axios.post(`${url}`, newPost, {headers}) 
-
+    
     }
     catch(error){
     console.error('Error at posting your news', error);
