@@ -16,11 +16,11 @@ export const RegisterForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await createUser(data);
-      if (response.success) {
-        localStorage.setItem('token', response.data.token);
-        navigate('/')// Redirige al usuario 
-      } 
+      console.log(data)
+        const response = await createUser(data);
+        localStorage.setItem('token', response.token);
+        setIsAuthenticated(true)
+        navigate('/home')// Redirige al usuario 
     } catch (error) {
       console.error('Error al registrar usuario:', error);
     }
