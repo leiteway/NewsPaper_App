@@ -77,6 +77,7 @@ const Card = ({ news }) => {
       
 
           <button onClick={() => navigate(`EditPost/${id}`)} className="button" style={{ backgroundColor: "#000000" }}>Modificar</button>
+          <button onClick={() => navigate(`Article/${id}`)} className="button" style={{ backgroundColor: "#000000" }}>Ver noticia</button>
         
       
         <button className="button" style={{ backgroundColor: "#500707" }} onClick={() => {
