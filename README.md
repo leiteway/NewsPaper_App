@@ -1,6 +1,7 @@
 # TECHTODAY 📰💻
 This project is a proposal of a sustainable development of a news management web application. Our website have a low-consumption design, using dark mode with a monotone palette of colours, system fonts that are already loaded on all the devices and images in webp format to reduce their weight. The user flow is easy and intuitive, and we have taken into account the UX without barriers avoiding pop-up banners and using dark patterns. We have also not included videos or animations to optimize the loading time of the website.
 
+
 # Index
 
 + [Description](#description)
@@ -15,18 +16,25 @@ This project is a proposal of a sustainable development of a news management web
 # Description
 The project has been built with two roles: admin and user. We have encrypted user sessions with username and password. On the one hand the *admin* is able to create, delete, edit and view news articles, and on the other hand the *user* can browse articles and also can use the like button which increment the news they really love.
 
+
 # Project Configuration
 
 1. **Clone the Repository:**
 `bash`
 * Copy code in your terminal: `git clone https://github.com/pointfs/NEWSPAPER.git`
+* First enter to the folder: `cd client`
 * Copy code to make the server run: `npm run dev`
 * This will start the server __http://localhost:5173__ using the database on MySQL Workbench.
 
 2. **Install Dependencies:** 
 `bash`
 * Copy code: `npm install`
-* Copy code in your terminal, to enter the repository folder: `cd NEWSPAPER` 
+* Copy code in your terminal, to enter the repository folder: `cd NEWSPAPER`
+
+
+# Initialize the Postman
+Methods in Postman to view, add, edit, and delete movie posters in our database.
+
 
 # Tests
 * Copy code: `npm run test` <br>
@@ -37,15 +45,24 @@ This will run the tests.
 We have built the folder ecosystem for our project in the Front-end and Back-end in an orderly and methodical way. We have divided the project in two folders called _client_ and _server_, and we have organized the files in each one correctly for the proper behaviour and understanding of the repository. We are going to mention the most important ones.
 On the _client_ folder: 
 * __node_modules:__ contains all the dependencies of your project. When you install packages using npm, they are stored here.
+* __db_server:__ plays a crucial role in ensuring the proper functioning and security of the database server.
 * __src:__ this is where the source code of your React application resides. It typically contains the following subfolders:
 1. *components:* contains reusable React components that make up our application's UI. Each component folder contains the subfolders of styles, CSS files or preprocessor files for styling your components.
 2. *pages:* contains React components that represent different pages of our application.
 3. *assets:* holds static assets like images, fonts, or other media files used in your application.
 4. *services:* contains modules for interacting with external services or APIs, in this case an archive of JavaScript.
-5. *context:*
-6. *routes:* 
+5. *context:* contains information about the context or environment in which the application operates.
+6. *routes:* defines the various routes or endpoints available in the application's API or web server.
 
 On the _server_ folder: 
+* __controllers:__ to handle HTTP requests.
+* __database:__ configuration of connections with the database.
+* __helpers:__ contains the import and export validations from express-validator.
+* __models__: the model of database.
+* __node_modules:__ contains all the dependencies of your project. When you install packages using npm, they are stored here.
+* __routes:__ route definitions for the methods of the API.
+* __test:__ unit and integration tests in one file.
+* __validators:__ contains the validations of the methods of the CRUD.
 
 
 # Technologies
