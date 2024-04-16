@@ -21,10 +21,15 @@ The project has been built with two roles: admin and user. We have encrypted use
 
 1. **Clone the Repository:**
 
-* Copy code in your terminal: ```bash $ git clone https://github.com/pointfs/NEWSPAPER.git```
-* First enter to the folder: ```bash $ cd client```
-* Copy code to make the server run: ```bash npm run dev```
+* Copy code in your terminal: ``` $ git clone https://github.com/pointfs/NEWSPAPER.git```
+* First enter to the folder: ```$ cd client```
+* Copy code to make the server run: ```npm run dev```
 * This will start the server __http://localhost:5173__ using the database on MySQL Workbench.
+
+2. **Create the file __.env__**
+   
+* Create the file __.env__ located in the folder "Hollywow-API"
+* Copy the information placed on ´.env_example´ and fill it with your personal data
 
 2. **Install Dependencies:** 
 `bash`
