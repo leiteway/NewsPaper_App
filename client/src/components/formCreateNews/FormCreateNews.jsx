@@ -1,14 +1,26 @@
 import { addNewPost } from '../../services/newsServices';
 import './FormCreateNews.css';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const FormCreateNews = () => {
     const {register, handleSubmit } = useForm();
+    const navigate = useNavigate();
 
 
   return (
-    
-        <form onSubmit={handleSubmit(newPost => {addNewPost(newPost)})} className="form-create-news"id="form-create-news" action="" method="">
+    <div className="container-form-create-news">
+    <form onSubmit={handleSubmit(newPost => {
+        addNewPost(newPost)
+        .then(() => {
+            Swal.fire('Noticia creada con éxito!');
+            navigate('/home'); // Asegúrate de que navigate esté definido y disponible en este contexto
+        })
+        .catch(error => {
+            console.error('Error al crear la noticia:', error);
+        });
+    })} className="form-create-news" id="form-create-news">
 
             <div className="form-input-label">
                 <label className="form-label" >Título de la noticia</label>
@@ -35,11 +47,12 @@ const FormCreateNews = () => {
             </div> 
 
             <div>
-                <button onClick={() => navigate()} className='button-form-create'>CANCELAR</button>
+                <button onClick={() => navigate('/home')} className='button-form-create'>CANCELAR</button>
                 <button type="submit" className='button-form-create'>ENVIAR</button>
             </div>
 
         </form> 
+        </div>
   )
 };
 

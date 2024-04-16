@@ -6,6 +6,8 @@ import RegisterForm from "../components/registerForm/RegisterForm";
 import NewPost from "../pages/NewPost";
 import LayoutPrivate from "../components/LayoutPrivate";
 import { getAllNews } from "../services/newsServices";
+import EditPost from "../pages/EditPost";
+import Article from "../pages/Article";
 
 
 export const router = createBrowserRouter([
@@ -33,6 +35,14 @@ export const router = createBrowserRouter([
           {
             path: "NewPost",
             element: <NewPost/>,
+          },
+          {
+            path: "EditPost/:id",
+            element: <EditPost/>,
+          },
+          {
+            path: "Article/:id",
+            element: <Article/>,
           }
         ]
 
