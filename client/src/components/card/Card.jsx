@@ -97,7 +97,7 @@ const Card = ({ news }) => {
     const { id, title, content, date, image } = news;
     console.log(news)
     const navigate = useNavigate();
-    let shortContent = content.length > 150 ? content.slice(0, 150) + '...' : content;
+    const shortContent = content.length > 150 ? content.slice(0, 150) + '...' : content;
 
   return (
     
