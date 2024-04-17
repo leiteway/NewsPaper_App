@@ -20,7 +20,8 @@ const NewsModel = connection_db.define('News', {
  },
  date:{
     type: DataTypes.DATE,
-    allowNull: false
+    allowNull: false,
+    
  },
  image:{
     type: DataTypes.STRING,
@@ -37,7 +38,7 @@ const NewsModel = connection_db.define('News', {
 },
 {
     tableName: 'news', // Nombre de la tabla en la base de datos
-    timestamps: true // Habilitando los campos los campos createdAt y updatedAt
+    timestamps: false // Habilitando los campos los campos createdAt y updatedAt
   }
 );
 
