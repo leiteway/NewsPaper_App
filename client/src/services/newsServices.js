@@ -87,7 +87,6 @@ export const getOnePost = async (id) => {
 
 //Método PUT
 export const editPost = async (id, data) => { 
-    console.log("Modificando la noticia");
     try{
         const token = localStorage.getItem('token');
         if (!token) {

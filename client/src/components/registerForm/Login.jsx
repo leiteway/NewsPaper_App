@@ -19,6 +19,7 @@ export const LoginForm = () => {
     try {
       const responseLogin = await loginUser(dataForm);
       localStorage.setItem('token',responseLogin.token);
+      Swal.fire(`Te has Loggeado correctamente!, bienvenid@, ${responseLogin.user_name}!`);
      
       const user = {
         role : responseLogin.user_role,

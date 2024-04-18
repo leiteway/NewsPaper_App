@@ -24,7 +24,7 @@ const FormEditNews = () => {
   return (
    
         <form onSubmit={handleSubmit(data => {editPost(newsId, data).then(() => {
-            Swal.fire('Noticia creada correctamente');
+            Swal.fire('Noticia modificada correctamente');
             navigate('/home'); // Asegúrate de que navigate esté definido y disponible en este contexto
         })})} className="form-edit-news"id="form-edit-news" >
 
