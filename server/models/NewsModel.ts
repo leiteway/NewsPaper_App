@@ -19,11 +19,11 @@ const NewsModel = connection_db.define('News', {
       allowNull: false
    },
    date:{
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false
    },
    image:{
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(1024),
       allowNull: false
    },
    user_id:{

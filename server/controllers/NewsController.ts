@@ -32,7 +32,7 @@ export const getOnePost = async (req: Request, res: Response) => {
 // POST
 
 export const addNewPost = async (req: Request, res: Response) =>{
-
+//revisar
     try{
       const authHeader = req.headers['authorization'];
       const token = authHeader && authHeader.split(' ')[1];
