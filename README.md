@@ -43,7 +43,7 @@ npm run dev
 * Copy the information placed on _.env_example_ and fill it with your personal data.
 
 3. **Install Dependencies:** 
-`bash`
+
 * Copy code:
 ```bash
 npm install
