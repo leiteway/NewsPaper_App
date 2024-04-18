@@ -21,7 +21,7 @@ const Home = () => {
     </Link>
     <div className="container-sidebar-cards"style={{ display: "flex" }}>
       <SideBar />
-      <div className="card-container" style={{ display: "flex", flexWrap: "wrap", flexDirection:"row", justifyContent: "right", flexGrow: 1 }}>
+      <div className="card-container" style={{ display: "flex", flexWrap: "wrap", flexDirection:"row", flexGrow: 2 }}>
      
      {news && news.map((news) => (
         <Card key={news.id} news={news} />

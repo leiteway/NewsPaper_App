@@ -20,7 +20,7 @@ const NewsCard = styled.div`
   box-shadow: 5px;  
   padding: 2%;
   margin: 2%;
-  max-width: 35rem;
+  max-width: 30rem;
   box-sizing: content-box;
   height: 40rem;
   font-family: 'Roboto', sans-serif;
