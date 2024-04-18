@@ -26,10 +26,17 @@
     margin-top: 1rem;
 }
 
+.form-content-label {
+    text-align: left;
+    resize: none;
+    /* field-sizing: content; */
+    max-height: fit-content;
+}
+
+
 .form-label {
     color:#fff;
-    padding-bottom: 1rem;
-    
+    padding-bottom: 1rem;   
 }
 
 .input-label {

@@ -24,7 +24,7 @@
 .form-content-label {
     text-align: left;
     resize: none;
-    field-sizing: content;
+    /* field-sizing: content; */
     max-height: fit-content;
 }
 
