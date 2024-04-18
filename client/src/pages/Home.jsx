@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from 'react-router-dom';
 import Card from "../components/card/Card";
+import Sidebar from "../components/sideBar/SideBar"
 
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
 
   return (
     <>
+    <Sidebar />
     {/* <h1 style={{ display:"flex", justifyContent:"center", color:"white", }}>NEWS TODAY </h1> */}
     <h2 style={{ display:"flex", justifyContent:"center", color:"white", fontWeight:"lighter", margin:"2rem" }}>Bienvenido a la página de noticias más interesantes del mundo tech</h2>
 

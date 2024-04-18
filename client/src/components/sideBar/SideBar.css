@@ -18,9 +18,10 @@ hr {
 .text-sidebar {
     display: flex;
     color: #fff;
-    padding: 10% 20%;
+    padding: 9% 20%;
     align-content: center;
-    
+    list-style: none;
+    text-decoration: none;
 }
 
 .title-sidebar {
@@ -53,6 +54,9 @@ hr {
 .text-contact-sidebar {
     color: #fff;
     z-index: 1;
+    list-style: none;
+    text-decoration: none;
+
 }
 
 .contact-bg {
@@ -86,5 +90,6 @@ hr {
     color: #fff; 
     border: none; 
 }
+
 
 
