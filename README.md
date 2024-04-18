@@ -28,8 +28,7 @@ git clone https://github.com/pointfs/NEWSPAPER.git
 ```
 
 * First enter to the folder:
-```bash
-cd client
+```bash cd client
 ```
 * Copy code to make the server run:
 ```bash
