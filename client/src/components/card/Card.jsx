@@ -99,6 +99,7 @@ const Card = ({ news }) => {
     console.log(news)
     const navigate = useNavigate();
     const shortContent = content.length > 150 ? content.slice(0, 150) + '...' : content;
+    const shortDate = date.slice(0, 10);
 
   return (
 
@@ -108,7 +109,7 @@ const Card = ({ news }) => {
         <img src={image} alt="news" />
        </section>
     <section className="news-text">
-      <p>{date}</p>
+      <p>{shortDate}</p>
       <h3 className="news-title">{title}</h3>
       <h4 className="news-content">{shortContent}</h4>
     </section>
