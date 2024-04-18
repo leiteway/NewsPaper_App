@@ -9,16 +9,6 @@
     margin-left: 2rem;
 }
 
-.sidebar-visible {
-    transform: translateX(0);
-    transition: transform 0.5s ease;
-  }
-  
-.sidebar-hidden {
-    transform: translateX(-100%);
-    transition: transform 0.5s ease;
-  }
-
 hr {
     width: 18rem;
     align-self: center;
