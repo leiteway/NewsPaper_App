@@ -20,52 +20,93 @@ The project has been built with two roles: admin and user. We have encrypted use
 
 # Project Configuration
 
-1. **Clone the Repository:**
-
-* Copy code in your terminal:
+### Clone the Repository
  ```bash
 git clone https://github.com/pointfs/NEWSPAPER.git
 ```
-
-* First enter to the folder:
-```bash cd client
-```
-* Copy code to make the server run:
-```bash
-npm run dev
-```
-* This will start the server __http://localhost:5173__ using the database on MySQL Workbench.
-
-2. **Create the file __.env__**
-
-* Create the file __.env__ located in the folder _server_.
-* Copy the information placed on _.env_example_ and fill it with your personal data.
-
-3. **Install Dependencies:** 
-
-* Copy code:
-```bash
-npm install
-```
-* Copy code in your terminal, to enter the repository folder:
+##### To enter the repository folder
 ```bash
 cd NEWSPAPER
 ```
+**** 
+## For the Frontend, you have to follow the next steps:
+##### First enter into the folder
+```bash
+cd client
+```
 
+##### For install all dependencies of Frontend, copy the next line
+ ```bash
+npm i
+```
+
+##### Make the server run
+```bash
+npm run dev
+```
+
+##### This will start the server __http://localhost:5173__ using Vite with React.
+
+****
+## For the Backend, you have to follow the next steps:
+### .env:
+* First create the file __.env__ located in the folder _server_.
+* Copy the information placed on _.env_example_ and fill it with your personal data.
+
+### Let's get started with MySQL Workbench.
+
+If you already have your Workbench environment set up, we can create a __Database:__
+<br> To do this, paste the following command into the Workbench sheet
+```sql
+CREATE DATABASE tech_today;
+```
+#### Once we have our Database created, we can proceed with the next commands.
+ 
+##### First enter into the folder
+```bash
+cd server
+```
+
+##### For install all dependencies of Backend, copy the next line
+ ```bash
+npm i
+```
+
+##### Make the server run
+```bash
+npm run dev
+```
+
+##### This will start the connection to the Database on Workbench.
+
+****
+
+# Tests
+### For this part you have to follow the next steps:
+##### First enter into the folder
+```bash
+cd server
+```
+
+##### For install all Test dependencies, copy the next line
+ ```bash
+npm i
+```
+
+##### Copy code to start the Jest
+```bash
+npm run test
+```
+
+##### This will run the tests.
+
+****
 
 # Initialize the Postman
 Click on this link to obtain our Postman information about the methods of the CRUD in our database. You can view, add, edit, and delete the articles of our website on it.<br>
 https://albamartinmz.postman.co/workspace/My-Workspace~1d37aef0-5e05-4f4d-8aa0-e702b0ca00bc/collection/32563763-1112c32c-0d93-4046-a71e-6813616cd5b7?action=share&creator=32563763
 
 
-
-# Tests
-* Copy code:
-```bash
-npm run test
-```
-<br>
-This will run the tests.
 
 
 # Project Structure
@@ -115,7 +156,7 @@ On the _server_ folder:
 
 
 # Authors
- - Scrum Master: [J.Leite](https://github.com/leiteway)
+ - Scrum Master: [Leite L.](https://github.com/leiteway)
  - Product Owner: [Fátima Cosme](https://github.com/pointfs)
  - Web Developer: [Desirée Carrizosa](https://github.com/DesireeCSilva)
  - Web Developer: [Alba Martín](https://github.com/albamartinmz)
