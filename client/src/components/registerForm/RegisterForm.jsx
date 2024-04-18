@@ -7,18 +7,21 @@ import GoogleIcon from '@mui/icons-material/Google';
 import createUser from '../../services/register-services';
 import { useNavigate } from 'react-router-dom';
 import { useUserContext } from '../../context/UserContext';
+import { yupResolver } from '@hookform/resolvers/yup';
+import userValidationSchema from '../../validations/userValidationSchema';
 import Swal from 'sweetalert2';
 
 export const RegisterForm = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm({resolver: yupResolver(userValidationSchema)});
   const navigate = useNavigate();
   const { setIsAuthenticated, setUser } = useUserContext();
 
   const onSubmit = async (data) => {
     try {
-      console.log(data)
         const response = await createUser(data);
+        console.log(response)
         localStorage.setItem('token', response.token);
+        Swal.fire(`Te has registrado correctamente!, bienvenid@, ${response.newUser.name}!`);
         setUser(response.newUser.role)
         setIsAuthenticated(true)
         navigate('/home')// Redirige al usuario 
@@ -53,16 +56,22 @@ export const RegisterForm = () => {
         <label>
           Nombre
           <input {...register('name')} required type="name" />
+          {errors.name && <div className="text-error">{errors.title.name}</div>} 
         </label>
 
         <label>
           Email
           <input {...register('email')} required type="email" />
+          {errors.email && <div className="text-error">{errors.email.message}</div>} 
         </label>
 
         <label>
           Contraseña
           <input {...register('password')} required type="password" />
+          {errors.password && <div className="text-error">{errors.password.message}</div>}
+          <p className='password-requirements'>Asegurate que tenga 8 caracteres o mas.<br/>
+          Debe tener al menos un caracter especial y al menos un numero.
+          </p>
         </label>
         
         <button type="submit">Registrarse</button>

@@ -4,7 +4,8 @@ import { useUserContext } from '../../context/UserContext';
 import LogOutButton from '../LogOutButton';
 
 export default function NavBar() {
-  const { isAuthenticated } = useUserContext()
+  const { isAuthenticated, user } = useUserContext()
+  console.log(user)
   return (
     <div className="navbar">
         <img className="logotipo" src='/src/assets/images/Logo/logo tech-3-AdminScreen.svg' alt="" />
@@ -15,7 +16,8 @@ export default function NavBar() {
             <>
           <div className='userContainer'>
             <img src='../src/assets/public/avatar-admin-screen.png' alt="" />
-            <p>Fátima</p>
+            <p>{user && user.name}</p>
+            {console.log(user)}
             </div>
             <LogOutButton />
             </>

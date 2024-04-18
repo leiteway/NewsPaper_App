@@ -97,12 +97,11 @@ const Card = ({ news }) => {
     }
     
     const { id, title, content, date, image } = news;
-    console.log(news)
     const navigate = useNavigate();
     const shortContent = content.length > 150 ? content.slice(0, 150) + '...' : content;
 
     const { user } = useUserContext();
-    console.log(user)
+
     
   return (
     <>
@@ -119,7 +118,7 @@ const Card = ({ news }) => {
     <div className="news-buttons">
       <button className="news-button-readmore" onClick={() => navigate(`Article/${id}`)}>Leer más</button>
       <FavoriteBorderIcon/>
-      { user === 'admin' && (
+      { user.role === 'admin' && (
         <>
       <EditOutlinedIcon className="news-button-edit" onClick={() => navigate(`EditPost/${id}`)} />
       <DeleteOutlined className="news-button-delete" onClick={() => {
