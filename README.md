@@ -93,7 +93,7 @@ cd server
 npm i
 ```
 
-##### Copy code to start the Jest
+##### Copy code to start the Jest Server
 ```bash
 npm run test
 ```
