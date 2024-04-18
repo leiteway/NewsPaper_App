@@ -5,6 +5,7 @@ import axios from 'axios';
 const url= 'http://localhost:5000/api/news'
 
 //Método GET
+
 export const getAllNews = async () => { 
     try {
         const token = localStorage.getItem('token');

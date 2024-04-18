@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import { useUserContext } from "../../context/UserContext";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
@@ -20,15 +20,13 @@ const NewsCard = styled.div`
   box-shadow: 5px;  
   padding: 2%;
   margin: 2%;
-  max-width: 90vw;
+  max-width: 35rem;
   box-sizing: content-box;
-  max-width: 550px;
+  height: 40rem;
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
   background:linear-gradient(#041116, #071A21, #09242E, #1A3645);
   color: white;
-
-
 
   .news-image {
     overflow: hidden;
@@ -84,7 +82,17 @@ const NewsCard = styled.div`
     cursor: pointer;
   }
 
+  
+  .animated-icon-heart , .animated-icon-edit, .animated-icon-delete {
+    cursor: pointer;
+  }
 
+  .animated-icon-heart :hover, .animated-icon-edit :hover, .animated-icon-delete :hover {
+
+    transform: scale(1.2);
+    transition: transform 0.5s;
+
+  }
 
 
 
@@ -102,7 +110,9 @@ const Card = ({ news }) => {
 
     const { user } = useUserContext();
 
-    
+        const shortDate = date.slice(0, 10);
+    const [isClicked, setIsClicked] = useState(false);
+
   return (
     <>
     <NewsCard>
@@ -110,17 +120,24 @@ const Card = ({ news }) => {
         <img src={image} alt="news" />
        </section>
     <section className="news-text">
-      <p>{date}</p>
+      <p>{shortDate}</p>
       <h3 className="news-title">{title}</h3>
       <h4 className="news-content">{shortContent}</h4>
     </section>
       
+    
     <div className="news-buttons">
       <button className="news-button-readmore" onClick={() => navigate(`Article/${id}`)}>Leer más</button>
-      <FavoriteBorderIcon/>
+      
+      <div className="animated-icon-heart">
+      <FavoriteBorderIcon style={{ color: isClicked ? 'red' : 'white' }} onClick={() => setIsClicked(!isClicked)} />
+      </div>
       { user.role === 'admin' && (
         <>
+      <div className="animated-icon-edit">
       <EditOutlinedIcon className="news-button-edit" onClick={() => navigate(`EditPost/${id}`)} />
+      </div>
+      <div className="animated-icon-delete">
       <DeleteOutlined className="news-button-delete" onClick={() => {
     Swal.fire({
       title: '¿Estás seguro?',
@@ -145,16 +162,14 @@ const Card = ({ news }) => {
         });
       }
     });
- }}/>
+ }}/></div>
  </>
- )}
-      
-    </div>
-
-  
-  </NewsCard>
+      )}
+ </div>
+ 
+</NewsCard>
 </>
-  )
+)
 }
 
 export default Card

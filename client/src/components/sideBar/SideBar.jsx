@@ -7,20 +7,23 @@ import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import { Link } from 'react-router-dom'
 
 export default function SideBar(){
+ 
+
   return (
     <>
-        <div className='sidebar-container'>
-            <p className='title-sidebar'>My Feed</p>
+ 
+      <div className='sidebar-container'>
+        <p className='title-sidebar'>My Feed</p>
             {<hr  />} 
             <section>
             <Link to="/home" replace className='icon-sidebar' style={{textDecoration: "none"}}><p className='text-sidebar'><CottageIcon className='icon-sidebar'/>Inicio</p></Link>
             <Link to="/home" replace className='icon-sidebar' style={{textDecoration: "none"}}><p className='text-sidebar'><EqualizerIcon className='icon-sidebar'/> Posts</p></Link>           
-            <Link to="/home/newpost" replace className='icon-sidebar'style={{textDecoration: "none"}}><p className='text-sidebar'><PushPinIcon className='icon-sidebar'/>Nuevo Post</p></Link>
+            <Link to="/home/newpost" replace className='icon-sidebar'style={{textDecoration: "none"}}><p className='text-sidebar'><PushPinIcon className='icon-sidebar'/> Nuevo Post</p></Link>
             </section>
             <section>
             <p className='text-sidebar'>CUENTA</p>
             <p className='text-sidebar'><PersonIcon className='icon-sidebar'/>Perfil</p>
-            <p className='text-sidebar'><RocketLaunchIcon className='icon-sidebar'/>Sign Out</p>
+            <Link to="/" className='text-sidebar'><RocketLaunchIcon className='icon-sidebar'/>Sign Out</Link>
             </section>
             <section>  
             <p className='text-sidebar'>REDES SOCIALES</p>
