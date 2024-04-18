@@ -4,16 +4,10 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-
-const validationSchema = yup.object().shape({
-    title: yup.string().required("Añade un titulo"),
-    content: yup.string().required("Añade el cuerpo de tu noticia"),
-    date: yup.date().required("Selecciona una fecha"),
-    image: yup.string().required("Hace falta un link").matches(/^(ftp|http|https):\/\/[^ "]+$/, "Sólo es válido formato http")});
+import formsValidationSchema from '../../validations/formsValidationSchema';
 
 const FormCreateNews = () => {
-    const {register, handleSubmit, formState: { errors } } = useForm({resolver: yupResolver(validationSchema)});
+    const {register, handleSubmit, formState: { errors } } = useForm({resolver: yupResolver(formsValidationSchema)});
     
     const navigate = useNavigate();
 
