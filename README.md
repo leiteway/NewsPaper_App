@@ -40,11 +40,7 @@ npm run dev
 2. **Create the file __.env__**
 
 * Create the file __.env__ located in the folder _server_.
-* Copy the information placed on
-```bash
-.env_example
-```
-and fill it with your personal data.
+* Copy the information placed on _.env_example_ and fill it with your personal data.
 
 3. **Install Dependencies:** 
 `bash`
