@@ -1,5 +1,5 @@
 import request from 'supertest';
-import { app, server } from '../app';
+import { app } from '../app';
 import connection_db from '../database/connection_db';
 import NewsModel from '../models/NewsModel';
 import UserModel from '../models/UserModel';
@@ -66,7 +66,6 @@ describe('Testing News CRUD', () => {
                 id: userId
             }
         });
-        server.close();
         connection_db.close();
     });
 

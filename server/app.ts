@@ -1,4 +1,4 @@
-import { DB_PORT } from "./config";
+import { DB_PORT, DB_TEST_NAME, NODE_ENV } from "./config";
 import connection_db from "./database/connection_db";
 import express from "express";
 import UserModel from "./models/UserModel";
@@ -35,8 +35,10 @@ app.use("/api/user", UserRouter)
   } catch (error) {
     console.error('Unable to connect to the database:', error);
   }
-
-
-export const server = app.listen(DB_PORT, () =>{
+  
+let server;
+if (NODE_ENV !== 'test') {
+server = app.listen(DB_PORT, () =>{
   console.log(`Server up in  http://localhost:${DB_PORT}/api`)
-});
+})
+};
