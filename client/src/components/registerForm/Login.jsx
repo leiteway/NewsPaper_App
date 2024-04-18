@@ -14,7 +14,7 @@ export const LoginForm = () => {
   const { setIsAuthenticated, setUser } = useUserContext();
 
   const HandleLoginForm = async (dataForm) => {
-    /* e.preventDefault(); lógica para enviar credenciales al back-end */
+
     try {
       const responseLogin = await loginUser(dataForm);
       localStorage.setItem('token',responseLogin.token);
