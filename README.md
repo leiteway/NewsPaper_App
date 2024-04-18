@@ -22,20 +22,20 @@ The project has been built with two roles: admin and user. We have encrypted use
 
 1. **Clone the Repository:**
 
-* Copy code in your terminal: ``` git clone https://github.com/pointfs/NEWSPAPER.git```
-* First enter to the folder: ```cd client```
-* Copy code to make the server run: ```npm run dev```
+* Copy code in your terminal: ```sh git clone https://github.com/pointfs/NEWSPAPER.git```
+* First enter to the folder: ```sh cd client```
+* Copy code to make the server run: ```sh npm run dev```
 * This will start the server __http://localhost:5173__ using the database on MySQL Workbench.
 
 2. **Create the file __.env__**
 
 * Create the file __.env__ located in the folder _server_.
-* Copy the information placed on ```.env_example``` and fill it with your personal data.
+* Copy the information placed on ```sh .env_example``` and fill it with your personal data.
 
 3. **Install Dependencies:** 
 `bash`
-* Copy code: ```npm install```
-* Copy code in your terminal, to enter the repository folder: ```cd NEWSPAPER```
+* Copy code: ```sh npm install```
+* Copy code in your terminal, to enter the repository folder: ```sh cd NEWSPAPER```
 
 
 # Initialize the Postman
@@ -106,7 +106,8 @@ On the _server_ folder:
 In our team we have several goals to meet and we are going to list them. We are working on improving our project and we have it under construction:
 * The like button: in the future this button will be able to add the user's favorite news to another page
 * The search bar: we will make this bar useful to search for keywords of the news that we want to see
-* On the SideBar: the profile icon doesn´t have functionality, and we want to develop a profile screen to our users.
+* On the SideBar: the profile icon doesn´t have functionality, and we want to develop a profile screen to our users
+* On the app in general: we will develop that the administrator can manage the roles of the users
 
 # Contributions
 Contributions are welcome! If you find any problems or have suggestions for improvement, please create an issue or make a pull request.
