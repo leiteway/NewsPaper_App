@@ -22,20 +22,40 @@ The project has been built with two roles: admin and user. We have encrypted use
 
 1. **Clone the Repository:**
 
-* Copy code in your terminal: ```sh git clone https://github.com/pointfs/NEWSPAPER.git```
-* First enter to the folder: ```sh cd client```
-* Copy code to make the server run: ```sh npm run dev```
+* Copy code in your terminal:
+ ```bash
+git clone https://github.com/pointfs/NEWSPAPER.git
+```
+
+* First enter to the folder:
+```bash
+cd client
+```
+* Copy code to make the server run:
+```bash
+npm run dev
+```
 * This will start the server __http://localhost:5173__ using the database on MySQL Workbench.
 
 2. **Create the file __.env__**
 
 * Create the file __.env__ located in the folder _server_.
-* Copy the information placed on ```sh .env_example``` and fill it with your personal data.
+* Copy the information placed on
+```bash
+.env_example
+```
+and fill it with your personal data.
 
 3. **Install Dependencies:** 
 `bash`
-* Copy code: ```sh npm install```
-* Copy code in your terminal, to enter the repository folder: ```sh cd NEWSPAPER```
+* Copy code:
+```bash
+npm install
+```
+* Copy code in your terminal, to enter the repository folder:
+```bash
+cd NEWSPAPER
+```
 
 
 # Initialize the Postman
@@ -44,7 +64,11 @@ https://albamartinmz.postman.co/workspace/My-Workspace~1d37aef0-5e05-4f4d-8aa0-e
 
 
 # Tests
-* Copy code: `npm run test` <br>
+* Copy code:
+```bash
+npm run test
+```
+<br>
 This will run the tests.
 
 
