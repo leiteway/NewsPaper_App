@@ -11,6 +11,7 @@ This project is a proposal of a sustainable development of a news management web
 + [Project Structure ](#project-structure)
 + [Technologies](#technologies)
 + [Authors](#authors)
++ [Next steps](#next-steps)
 + [Contributions](#contributions)
 
 # Description
@@ -29,12 +30,12 @@ The project has been built with two roles: admin and user. We have encrypted use
 2. **Create the file __.env__**
 
 * Create the file __.env__ located in the folder _server_.
-* Copy the information placed on ´.env_example´ and fill it with your personal data.
+* Copy the information placed on ```.env_example``` and fill it with your personal data.
 
 3. **Install Dependencies:** 
 `bash`
-* Copy code: `npm install`
-* Copy code in your terminal, to enter the repository folder: `cd NEWSPAPER`
+* Copy code: ```npm install```
+* Copy code in your terminal, to enter the repository folder: ```cd NEWSPAPER```
 
 
 # Initialize the Postman
@@ -100,6 +101,12 @@ On the _server_ folder:
  - Web Developer: [Alba Martín](https://github.com/albamartinmz)
  - Web Developer: [Kristy Neiras](https://github.com/krisneiras)
 
+
+# Next Steps
+In our team we have several goals to meet and we are going to list them. We are working on improving our project and we have it under construction:
+* The like button: in the future this button will be able to add the user's favorite news to another page
+* The search bar: we will make this bar useful to search for keywords of the news that we want to see
+* On the SideBar: the profile icon doesn´t have functionality, and we want to develop a profile screen to our users.
 
 # Contributions
 Contributions are welcome! If you find any problems or have suggestions for improvement, please create an issue or make a pull request.
