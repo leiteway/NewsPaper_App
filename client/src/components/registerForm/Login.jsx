@@ -11,13 +11,15 @@ import { useUserContext } from '../../context/UserContext';
 export const LoginForm = () => {
   const { register, handleSubmit } = useForm(); // toda la dataForm viene del useForm que dentro tiene el register que lo tenemos en el campo del formulario
   const navigate = useNavigate();
-  const { setIsAuthenticated } = useUserContext();
+  const { setIsAuthenticated, setUser } = useUserContext();
 
   const HandleLoginForm = async (dataForm) => {
     /* e.preventDefault(); lógica para enviar credenciales al back-end */
     try {
       const responseLogin = await loginUser(dataForm);
       localStorage.setItem('token',responseLogin.token);
+      console.log(responseLogin)
+      setUser(responseLogin.user_role)
       setIsAuthenticated(true);
       navigate('home');
     } catch (error){

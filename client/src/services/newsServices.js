@@ -56,9 +56,9 @@ export const addNewPost = async (newPost) => {
         const headers = {
             'Authorization': `Bearer ${token}`
         }; 
-
-    const news = await axios.post(`${url}`, newPost, {headers}) 
-    
+console.log(token)
+    const news = await axios.post(`${url}`, newPost, {headers});
+console.log(news)
     }
     catch(error){
     console.error('Error at posting your news', error);
