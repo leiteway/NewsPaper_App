@@ -7,6 +7,7 @@ import AppleIcon from '@mui/icons-material/Apple';
 import GoogleIcon from '@mui/icons-material/Google';
 import { loginUser } from '../../services/login-services';
 import { useUserContext } from '../../context/UserContext';
+import Swal from 'sweetalert2'
 
 export const LoginForm = () => {
   const { register, handleSubmit } = useForm(); // toda la dataForm viene del useForm que dentro tiene el register que lo tenemos en el campo del formulario
@@ -18,7 +19,7 @@ export const LoginForm = () => {
     try {
       const responseLogin = await loginUser(dataForm);
       localStorage.setItem('token',responseLogin.token);
-      console.log(responseLogin)
+     
       const user = {
         role : responseLogin.user_role,
         name : responseLogin.user_name
@@ -28,9 +29,21 @@ export const LoginForm = () => {
       navigate('home');
     } catch (error){
       console.error('Error:', error);
-     }
+      if (error.response && error.response.status === 401) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error de autenticación',
+          text: 'El correo electrónico o la contraseña son incorrectos.',
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Ha ocurrido un error inesperado.',
+        });
+      }
+   }
   };
-
   return (
     <>
     <div className="container-form">
