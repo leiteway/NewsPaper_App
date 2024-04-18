@@ -4,6 +4,7 @@ import SideBar from '../components/sideBar/SideBar';
 import React from 'react';
 
 
+
 const Home = () => {
  const news = useLoaderData();
  
@@ -18,12 +19,14 @@ const Home = () => {
           Agregar Noticia
       </button>
     </Link>
-    <SideBar/>
-    <div className="card-container" style={{ display: "flex", flexWrap: "wrap", flexDirection:"column", justifyContent: "center" }}>
+    <div className="container-sidebar-cards"style={{ display: "flex" }}>
+      <SideBar />
+      <div className="card-container" style={{ display: "flex", flexWrap: "wrap", flexDirection:"row", justifyContent: "right", flexGrow: 1 }}>
      
      {news && news.map((news) => (
         <Card key={news.id} news={news} />
       ))}
+    </div>
     </div>
   </>
   );

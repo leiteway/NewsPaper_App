@@ -1,16 +1,15 @@
 import './NavBar.css'
 import Box from '@mui/material/Box';
-import SearchIcon from '@mui/icons-material/Search';
 import { useUserContext } from '../../context/UserContext';
 import LogOutButton from '../LogOutButton';
+import { Link } from 'react-router-dom'
 
 export default function NavBar() {
   const { isAuthenticated } = useUserContext()
   return (
     <div className="navbar">
-        <img className="logotipo" src='../src/assets/public/logotipo.png' alt="" />
+        <Link to="/" replace className='logo-nav'><img className="logotipo" src='/src/assets/images/Logo/logo tech-3-AdminScreen.svg' alt="" /></Link>
         <Box>
-            <SearchIcon className='searchIcon'/>
             <input className="searchBar" placeholder="Escribe tu búsqueda aquí..." />
         </Box>
         {isAuthenticated && (

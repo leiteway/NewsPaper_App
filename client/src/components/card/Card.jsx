@@ -12,22 +12,20 @@ import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 const NewsCard = styled.div`
 
   display: flex;
-  align-items:;
+  align-items: center;
   flex-direction: column;
   border: 1px solid #43766C;
   border-radius: 25px;
-  box-shadow: 5px;
+  box-shadow: 5px;  
   padding: 2%;
   margin: 2%;
   max-width: 35rem;
   box-sizing: content-box;
-  height: 35rem;
+  height: 40rem;
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
   background:linear-gradient(#041116, #071A21, #09242E, #1A3645);
   color: white;
-
-
 
   .news-image {
     overflow: hidden;
@@ -85,9 +83,6 @@ const NewsCard = styled.div`
 
 
 
-
-
-
 `
 
 const Card = ({ news }) => {
@@ -114,6 +109,7 @@ const Card = ({ news }) => {
       <h4 className="news-content">{shortContent}</h4>
     </section>
       
+    
     <div className="news-buttons">
       <button className="news-button-readmore" onClick={() => navigate(`Article/${id}`)}>Leer más</button>
       <FavoriteBorderIcon/>
@@ -144,12 +140,11 @@ const Card = ({ news }) => {
     });
  }}/>
       
-    </div>
+</div>
 
-  
-  </NewsCard>
+</NewsCard>
 
-  )
+)
 }
 
 export default Card

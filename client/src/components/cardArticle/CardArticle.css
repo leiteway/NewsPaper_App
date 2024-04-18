@@ -1,0 +1,45 @@
+.container-article {
+    display: flex;
+}
+
+.card-detail {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6rem;
+    background: linear-gradient(90deg, #0E212C, #1A3645);
+    border-radius: 40px;
+    margin-top: 2rem;
+
+}
+
+.card-detail-image {
+    width: 50rem;
+    border-radius: 60px;
+    padding: 2rem;
+}
+
+.card-detail-title, .card-detail-content, .card-detail-date {
+    color: #fff;
+}
+
+.card-detail-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card-detail-date {
+    padding: 1rem;
+}
+
+.heart-date {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    height: 3rem;
+    margin-right: 1rem
+}
+
+.text-card-detail {
+    padding: 2rem 1rem 1.5rem 2rem;
+    width: 50rem;
+}

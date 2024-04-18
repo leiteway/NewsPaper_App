@@ -15,22 +15,28 @@
 
 
 .form-input-label{
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 
 .form-label {
     color:#fff;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 
 .input-label {
-    background-color: transparent;
     width: 25rem;
-    height: 2.6rem;
-    border-radius: 8rem;
-    color:#fff;
+    height: 2.9rem;
+    border: solid 0.125rem #1A3645;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 0.625rem #1A3645;
+    background: linear-gradient(70deg, #071a21, #041116);
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    padding-left: 1rem;
+
 }
 
 
