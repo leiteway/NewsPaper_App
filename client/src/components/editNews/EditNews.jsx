@@ -22,7 +22,7 @@ const FormEditNews = () => {
     getOneNews();
 
   return (
-   
+    <div className="container-form-create-news">
         <form onSubmit={handleSubmit(data => {editPost(newsId, data).then(() => {
             Swal.fire('Noticia creada correctamente');
             navigate('/home'); // Asegúrate de que navigate esté definido y disponible en este contexto
@@ -38,14 +38,14 @@ const FormEditNews = () => {
 
             <div className="form-input-label">
                 <label for="content" className="form-label" >Contenido</label>
-                <input {...register('content')} id="content" type="text" className="input-label" placeholder="Añade tu contenido aquí" />
+                <textarea {...register('content')} id="content" type="text" className="input-label form-content-label" placeholder="Añade tu contenido aquí" style={{height:"10rem"}} />
                 <p></p>                
             </div>
 
 
             <div className="form-input-label">
                 <label for="date" className="form-label" >Fecha</label>
-                <input {...register('date')} id="date" type="date" className="input-label" placeholder="Añade tu contenido aquí" />
+                <input {...register('date')} id="date" type="date" className="input-label" placeholder="Añade tu fecha aquí" />
                 <p></p>                
             </div>
 
@@ -64,7 +64,7 @@ const FormEditNews = () => {
 
 
         </form>  
-   
+   </div>
   )
 };
 

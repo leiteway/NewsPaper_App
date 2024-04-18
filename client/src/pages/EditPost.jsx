@@ -1,9 +1,10 @@
 import FormEditNews from '../components/editNews/EditNews'
-// import SideBar from '../components/sideBar/SideBar'
+import Banner from '../components/banner/Banner'
 
 const EditPost = () => {
   return (
     <div>
+      <Banner />
       <FormEditNews/>
     </div>
   )

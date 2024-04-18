@@ -32,7 +32,7 @@ export default function SideBar(){
                 <img className='icon-contact-sidebar' src="/src/assets/public/Icon-contact-us.png" alt="Icono de contacto" />
                 <p className='text-contact-sidebar'>¿Necesitas ayuda?</p>
                 <p className='text-contact-sidebar'>Contacta con nosotras</p>
-                <button className='button-contact-sidebar'>CONTACTAR</button>
+                <button className='button-contact-sidebar' style={{textDecoration: "none"}}><a href="https://www.outlook.com" target="_blank" style={{textDecoration: "none", color:"#fff"}}>CONTACTAR</a></button>
             </section> 
         </div>   
     </>
