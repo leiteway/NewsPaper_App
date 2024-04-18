@@ -8,6 +8,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 
 
+
 const NewsCard = styled.div`
 
   display: flex;
@@ -18,12 +19,12 @@ const NewsCard = styled.div`
   box-shadow: 5px;  
   padding: 2%;
   margin: 2%;
-  max-width: 90vw;
+  max-width: 35rem;
   box-sizing: content-box;
-  max-width: 550px;
+  
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
-  background-color:linear-gradient(rgba(7, 26, 33, 0.5),rgba(9, 36, 46, 0.5), rgba(7, 26, 33, 0.5));
+  background:linear-gradient(#041116, #071A21, #09242E, #1A3645);
   color: white;
 
 
@@ -100,6 +101,7 @@ const Card = ({ news }) => {
     const shortContent = content.length > 150 ? content.slice(0, 150) + '...' : content;
 
   return (
+
     
     <NewsCard>
      <section className="news-image">

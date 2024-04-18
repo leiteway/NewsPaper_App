@@ -5,9 +5,13 @@ import PushPinIcon from '@mui/icons-material/PushPin';
 import PersonIcon from '@mui/icons-material/Person';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 
+
 export default function SideBar(){
+ 
+
   return (
     <>
+    
         <div className='sidebar-container'>
             <p className='title-sidebar'>My Feed</p>
             {<hr  />} 
