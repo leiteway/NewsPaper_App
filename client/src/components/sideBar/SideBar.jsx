@@ -23,7 +23,7 @@ export default function SideBar(){
             <section>
             <p className='text-sidebar'>CUENTA</p>
             <p className='text-sidebar'><PersonIcon className='icon-sidebar'/>Perfil</p>
-            <p className='text-sidebar'><RocketLaunchIcon className='icon-sidebar'/>Sign Out</p>
+            <Link to="/" className='text-sidebar'><RocketLaunchIcon className='icon-sidebar'/>Sign Out</Link>
             </section>
             <section>  
             <p className='text-sidebar'>REDES SOCIALES</p>

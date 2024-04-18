@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { deletePost } from "../../services/newsServices";
@@ -81,6 +81,19 @@ const NewsCard = styled.div`
     cursor: pointer;
   }
 
+  
+  .animated-icon-heart , .animated-icon-edit, .animated-icon-delete {
+    cursor: pointer;
+  }
+
+  .animated-icon-heart :hover, .animated-icon-edit :hover, .animated-icon-delete :hover {
+
+    transform: scale(1.2);
+    transition: transform 0.5s;
+
+  }
+
+
 
 
 `
@@ -95,6 +108,7 @@ const Card = ({ news }) => {
     const navigate = useNavigate();
     const shortContent = content.length > 150 ? content.slice(0, 150) + '...' : content;
     const shortDate = date.slice(0, 10);
+    const [isClicked, setIsClicked] = useState(false);
 
   return (
 
@@ -112,8 +126,14 @@ const Card = ({ news }) => {
     
     <div className="news-buttons">
       <button className="news-button-readmore" onClick={() => navigate(`Article/${id}`)}>Leer más</button>
-      <FavoriteBorderIcon/>
+      
+      <div className="animated-icon-heart">
+      <FavoriteBorderIcon style={{ color: isClicked ? 'red' : 'white' }} onClick={() => setIsClicked(!isClicked)} />
+      </div>
+      <div className="animated-icon-edit">
       <EditOutlinedIcon className="news-button-edit" onClick={() => navigate(`EditPost/${id}`)} />
+      </div>
+      <div className="animated-icon-delete">
       <DeleteOutlined className="news-button-delete" onClick={() => {
     Swal.fire({
       title: '¿Estás seguro?',
@@ -138,10 +158,10 @@ const Card = ({ news }) => {
         });
       }
     });
- }}/>
-      
-</div>
+ }}/></div>
 
+ </div>
+ 
 </NewsCard>
 
 )
