@@ -71,3 +71,7 @@
     cursor: pointer; 
     margin-top: 3%;
 }
+
+.password-requirements {
+    color: rgb(10, 219, 122)
+}

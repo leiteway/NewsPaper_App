@@ -19,7 +19,11 @@ export const LoginForm = () => {
       const responseLogin = await loginUser(dataForm);
       localStorage.setItem('token',responseLogin.token);
       console.log(responseLogin)
-      setUser(responseLogin.user_role)
+      const user = {
+        role : responseLogin.user_role,
+        name : responseLogin.user_name
+      }
+      setUser(user)
       setIsAuthenticated(true);
       navigate('home');
     } catch (error){

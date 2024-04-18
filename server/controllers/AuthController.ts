@@ -30,6 +30,7 @@ export const registerUser = async (req: Request, res: Response) =>{
 export const loginUser = async(req:Request, res:Response) => {
     try{
         const user:any = await UserModel.findOne( {where: {email: req.body.email}});
+        console.log(user)
 
         if(!user){
             return res.status(404).send({error: "USER_NOT_FOUND"})
@@ -43,7 +44,8 @@ export const loginUser = async(req:Request, res:Response) => {
 
         const token = await createToken(user);
 
-        res.status(200).json({message:'Log in successfull', token, user_role: user.role})
+        
+        res.status(200).json({message:'Log in successfull', token, user_role: user.role, user_name: user.name})
     }
 
     catch(error: any){
