@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc -outDir ./build",
     "test": "jest --detectOpenHandles",
-    "dev": "ts-node-dev --respawn ./app.js",
+    "dev": "ts-node-dev --respawn ./app.ts",
     "start": "node ./build/app.js"
   },
   "keywords": [],
