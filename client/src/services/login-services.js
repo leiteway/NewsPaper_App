@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000/api/auth/login';
+const url = 'https://newspaper-api-10c3.onrender.com/api/auth/login';
 
 export const loginUser = async (data) =>{
     try{

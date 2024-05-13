@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = "http://localhost:5000/api/auth/register";
+const url = "https://newspaper-api-10c3.onrender.com/api/auth/register";
 
 export const createUser = async (data) => {
   try {

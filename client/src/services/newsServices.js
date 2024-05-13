@@ -2,7 +2,7 @@ import axios from 'axios';
 
 ///REVISAR TODAS LAS URLS
 
-const url= 'http://localhost:5000/api/news'
+const url= 'https://newspaper-api-10c3.onrender.com/api/news'
 
 //Método GET
 
