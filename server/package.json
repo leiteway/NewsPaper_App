@@ -7,7 +7,7 @@
     "build": "tsc -outDir ./build",
     "test": "jest --detectOpenHandles",
     "dev": "ts-node-dev --respawn ./app.js",
-    "start": "node app.js"
+    "start": "node ./build/app.js"
   },
   "keywords": [],
   "author": "",
